@@ -40,7 +40,7 @@ const Home = () => {
           <div className="items">
             <div className="text">
               <h1>
-                Đón xuân <br /> COLLECTION
+                Đón xuân <br/> COLLECTION
               </h1>
               <button>
                 Đến ngay
@@ -48,6 +48,7 @@ const Home = () => {
                   <ArrowForwardIcon />
                 </span>
               </button>
+              <div className="year">2025</div>
             </div>
           </div>
           {/*  */}
@@ -56,7 +57,6 @@ const Home = () => {
           </div>
           {/*  */}
         </div>
-        <div className="year">2025</div>
       </div>
 
       <div className="widget">
@@ -93,7 +93,7 @@ const Home = () => {
           <h5>VỀ LOGO</h5>
           <p>Đón đầu xu hướng, bức phá khỏi vùng an toàn</p>
         </div>
-        <div className="about_items">
+        {/* <div className="about_items">
           <div className="item">
             <SquareIcon color="black" className="icon rotate" />
             <b>TOP TRENDING</b>
@@ -126,7 +126,7 @@ const Home = () => {
               không ai có thể thay thế, bạn phải luôn luôn khác biệt
             </p>
           </div>
-        </div>
+        </div> */}
         <div className="home_note">
           <div className="chat_icon">
             <QuestionAnswerIcon fontSize="500" />
@@ -159,7 +159,7 @@ const Home = () => {
             <img src="/public/logoBrands/prada.png" alt="" />
           </div>
         </div>
-        <div className="instagram">
+        {/* <div className="instagram">
           <div className="box">
             <div className="ig_logo">
               <InstagramIcon />
@@ -200,7 +200,7 @@ const Home = () => {
               <img src="/public/ig_imgs/ig_img_5.webp" alt="" />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
