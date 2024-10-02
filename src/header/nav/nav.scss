@@ -5,7 +5,6 @@
   z-index: 99999;
   width: 100%;
   padding-top: 20px;
-  transition: top 0.3s;
   z-index: 99998;
 
   ul {
@@ -24,29 +23,24 @@
         color: $accent-color;
         text-decoration: none;
         font-weight: bolder;
-        &:hover {
-          scale: 120%;
-        }
+        font-size: 12px;
       }
     }
-  }
-  .nav_close {
-    position: relative;
-    width: 30px;
-    height: 30px;
   }
 }
 
 .menu.active {
   display: block;
   position: absolute;
-  top: 100%;
+  top: 99%;
   left: 0;
   width: 100%;
   background-color: $background-color;
   border-bottom: 1px solid rgba(0, 0, 0, 0.315);
+  border-top: 1px solid rgba(0, 0, 0, 0.315);
   z-index: 99998;
   //
+
 }
 
 @media (min-width: 768px) {

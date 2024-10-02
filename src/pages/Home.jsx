@@ -80,7 +80,7 @@ const Home = () => {
       {/* products */}
       <div className="home_products">
         <div className="home_title">
-          <h5>* SẢN PHẨM BÁN CHẠY *</h5>
+          <h5>SẢN PHẨM BÁN CHẠY</h5>
           <p>
             Bộ sưu tập mùa Xuân 2025 đa dạng mẫu mã, mua ngay nhận ưu đã lớn
           </p>
