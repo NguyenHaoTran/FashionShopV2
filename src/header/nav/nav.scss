@@ -6,6 +6,7 @@
   width: 100%;
   padding-top: 20px;
   z-index: 99998;
+  transition: transform 0.3s ease-in-out;
 
   ul {
     list-style: none;
@@ -40,6 +41,7 @@
   border-top: 1px solid rgba(0, 0, 0, 0.315);
   z-index: 99998;
   //
+
 
 }
 
