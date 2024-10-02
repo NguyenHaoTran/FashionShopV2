@@ -1,0 +1,29 @@
+ //Position
+ //// VD: @include position(center);
+ @mixin position($pos) {
+     @if $pos ==top-left {
+         top: 0;
+         left: 0;
+     }
+
+     @if $pos ==top-right {
+         top: 0;
+         right: 0;
+     }
+
+     @if $pos ==bot-left {
+         bottom: 0;
+         left: 0;
+     }
+
+     @if $pos ==bot-right {
+         bottom: 0;
+         right: 0;
+     }
+
+     @if $pos ==center {
+         top: 50%;
+         left: 50%;
+         translate: -50% -50%;
+     }
+ }

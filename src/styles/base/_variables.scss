@@ -1,0 +1,28 @@
+// Color palette
+$primary-color: #21A691;
+$secondary-color: #27403E;
+$accent-color: #87DF2C;
+$background-color: #060D10;
+$text-color: #ffffff;
+$link-color: #B4B4B2;
+$link-hover-color: darken($link-color, 10%);
+
+// _variables.scss
+$primary-font: "Roboto", sans-serif;
+$secondary-font: "JetBrains Mono",
+monospace;
+
+// Font sizes
+$base-font-size: 16px;
+$h1-font-size: 2.5rem;
+$h2-font-size: 2rem;
+$h3-font-size: 1.75rem;
+
+$font-small: 12px;
+$font-medium: 16px;
+$font-large: 24px;
+
+// Breakpoints
+$mobile: 768px;
+$tablet: 1250px;
+$desktop: 1600px;

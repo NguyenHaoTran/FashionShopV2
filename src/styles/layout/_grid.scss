@@ -1,0 +1,15 @@
+@import '../base/variables';
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    @include respond-to(mobile) {
+        grid-template-columns: 1fr; // Chuyển đổi thành bố cục 1 cột cho màn hình nhỏ
+    }
+
+    @include respond-to(tablet) {
+        grid-template-columns: repeat(2, 1fr); // 2 cột cho màn hình tablet
+    }
+}

@@ -1,0 +1,17 @@
+// src/styles/main.scss
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+// Import base styles
+@import "./base/reset";
+@import "./base/variables";
+@import "./base/mixins";
+@import "./base/typography";
+
+// Import layout styles
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/grid";
+
+// Import component styles
+@import "./components/buttons";
+@import "./components/form";

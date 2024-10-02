@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import "./variables";
+@import "./mixins";
+
+// Thiết lập font cho toàn trang
+body {
+  // font-family: $primary-font;
+  // font-size: $base-font-size;
+  // line-height: 1.6;
+  // color: $text-color;
+  font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    // font-weight: <weight>;
+    font-style: normal;
+    color: $text-color;
+}
+
+
+h1 {
+  font-size: $h1-font-size;
+}
+
+h2 {
+  font-size: $h2-font-size;
+}
+
+h3 {
+  font-size: $h3-font-size;
+}
