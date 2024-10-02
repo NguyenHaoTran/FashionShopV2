@@ -110,14 +110,16 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 
     h5 {
-      font-size: 55px;
+      font-size: 30px;
       margin: 10px;
+      color: black;
     }
 
     p {
+      text-align: center;
       color: rgb(83, 83, 83);
     }
   }
@@ -129,6 +131,8 @@
     margin-bottom: 100px;
   }
 }
+
+//
 
 .home_about {
   width: 100%;
@@ -149,6 +153,7 @@
     h5 {
       font-size: 45px;
       margin: 10px;
+      color: black;
     }
 
     p {
@@ -157,15 +162,15 @@
   }
 
   .about_items {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     align-items: center;
     max-width: 80%;
     border-bottom: solid 0.1px rgb(153, 153, 153);
 
     .item {
-      padding: 0 55px 0 55px;
-      height: 300px;
+      padding: 0 25px 0 25px;
+      height: 220px;
       width: 300px;
       display: flex;
       flex-direction: column;
@@ -188,11 +193,13 @@
 
       p {
         text-align: center;
-        color: rgb(83, 83, 83);
+        color: $accent-color;
       }
     }
   }
 }
+
+//
 
 .home_note {
   display: flex;
@@ -208,10 +215,15 @@
 
   .note {
     font-weight: normal;
-    font-size: 30px;
     max-width: 800px;
     text-align: center;
     color: rgb(83, 83, 83);
+    padding: 0 20px 0 20px;
+    p {
+      font-size: 20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
   }
 
   .CEO_name {
@@ -228,19 +240,19 @@
 
   .note_imgs {
     padding-top: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
-
+    margin-bottom: 140px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     img {
-      width: 60%;
+      width: 100%;
     }
-
     p {
       font-weight: bold;
       font-size: 50px;
-      padding-right: 10%;
+      z-index: 3;
     }
 
     b {
@@ -280,7 +292,6 @@
     .ig_logo {
       color: white;
       position: absolute;
-      width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
