@@ -1,0 +1,67 @@
+@import "../../styles/main.scss";
+
+.menu {
+  display: none;
+  z-index: 9999;
+  width: 100%;
+  padding-top: 20px;
+  transition: top 0.3s;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 30px;
+
+    li {
+      a {
+        color: $accent-color;
+        text-decoration: none;
+        font-weight: bolder;
+        &:hover {
+          scale: 120%;
+        }
+      }
+    }
+  }
+  .nav_close {
+    position: relative;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.menu.active {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: $background-color;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.315);
+
+  //
+}
+
+@media (min-width: 768px) {
+  .menu {
+    display: flex;
+
+    ul {
+      display: flex;
+
+      li {
+        margin: 0 1rem;
+      }
+    }
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}

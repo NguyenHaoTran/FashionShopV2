@@ -1,16 +1,16 @@
 // Color palette
-$primary-color: #21A691;
-$secondary-color: #27403E;
-$accent-color: #87DF2C;
-$background-color: #060D10;
+$primary-color: #dc3e37; //Botton(đăng ký, mua ngay,...), logo, tiêu đề
+$secondary-color: #f2965b; //thẻ thông tin(tìm hiểu thêm,..), tiêu đề phụ(sub title)
+$tertiary-color: #ac9d9a; //Nền hoặc viền
+$accent-color: #322a2a; //icons, chi tiết cần nổi bật
+$background-color: #edebea;
 $text-color: #ffffff;
-$link-color: #B4B4B2;
-$link-hover-color: darken($link-color, 10%);
+$link-color: #dc3e37;
 
 // _variables.scss
-$primary-font: "Roboto", sans-serif;
-$secondary-font: "JetBrains Mono",
-monospace;
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+$primary-font: "Nunito", sans-serif;
+$secondary-font: "Playfair Display", serif;
 
 // Font sizes
 $base-font-size: 16px;

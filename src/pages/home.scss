@@ -1,0 +1,305 @@
+@import "../styles/main.scss";
+
+.home {
+  padding-top: 100px;
+
+  .content {
+    .items {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .text {
+        position: relative;
+        font-size: 30px;
+        h1 {
+          color: $accent-color;
+          font-family: $secondary-font;
+        }
+      }
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+        padding: 10px;
+        border-radius: 30px;
+        background-color: white;
+
+        span {
+          margin-top: 5px;
+          margin-left: 10px;
+        }
+      }
+    }
+    .img {
+      position: relative;
+      width: 200px;
+      img {
+        width: 100%;
+        border-radius: 15px;
+      }
+    }
+  }
+
+  .year {
+    position: absolute;
+    left: 0;
+    transform: rotate(90deg);
+    font-size: 150px;
+    opacity: 40%;
+    overflow-x: hidden;
+  }
+}
+//
+.widget {
+  background-color: rgb(0, 0, 0);
+  margin-top: 100px;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+
+  .line {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    flex-direction: row;
+    gap: 50px;
+    animation: 30s slide infinite linear;
+
+    p {
+      font-size: 50px;
+      font-weight: bolder;
+      color: white;
+    }
+
+    span {
+      margin-top: 50px;
+      font-size: 100px;
+      color: white;
+    }
+  }
+}
+
+//
+.home_products {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  // background-color: aqua;
+  margin-top: 100px;
+
+  .home_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    h5 {
+      font-size: 55px;
+      margin: 10px;
+    }
+
+    p {
+      color: rgb(83, 83, 83);
+    }
+  }
+
+  .home_list_products {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 100px;
+  }
+}
+
+.home_about {
+  width: 100%;
+  padding-top: 50px;
+  border-top: solid 0.1px rgb(153, 153, 153);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    h5 {
+      font-size: 45px;
+      margin: 10px;
+    }
+
+    p {
+      color: rgb(83, 83, 83);
+    }
+  }
+
+  .about_items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 80%;
+    border-bottom: solid 0.1px rgb(153, 153, 153);
+
+    .item {
+      padding: 0 55px 0 55px;
+      height: 300px;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .icon {
+        font-size: 60px;
+
+        .rotate {
+          transform: rotate(90deg);
+        }
+      }
+
+      b {
+        font-size: 15px;
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+        color: rgb(83, 83, 83);
+      }
+    }
+  }
+}
+
+.home_note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 60px;
+  width: 100%;
+
+  .chat_icon {
+    font-size: 50px;
+  }
+
+  .note {
+    font-weight: normal;
+    font-size: 30px;
+    max-width: 800px;
+    text-align: center;
+    color: rgb(83, 83, 83);
+  }
+
+  .CEO_name {
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  .sub_name {
+    font-weight: light;
+    margin-top: 10px;
+    color: rgb(83, 83, 83);
+    border-bottom: solid 0.1px rgb(153, 153, 153);
+  }
+
+  .note_imgs {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    img {
+      width: 60%;
+    }
+
+    p {
+      font-weight: bold;
+      font-size: 50px;
+      padding-right: 10%;
+    }
+
+    b {
+      position: absolute;
+      right: 0;
+      font-size: 200px;
+      opacity: 5%;
+      transform: rotate(90deg);
+    }
+  }
+
+  .brands {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    img {
+      width: 10%;
+    }
+  }
+}
+
+// Instagram
+.instagram {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .ig_logo {
+      color: white;
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 99;
+    }
+
+    .ig_img {
+      overflow: hidden;
+    }
+
+    img {
+      width: 100%;
+      transition: transform 0.6s ease-in-out;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
