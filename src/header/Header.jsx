@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Nav from "./nav/Nav.jsx";
 import "./header.scss";
 
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 

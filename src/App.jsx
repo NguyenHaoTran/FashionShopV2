@@ -10,6 +10,7 @@ import Contacts from "./pages/Contacts.jsx";
 //
 import Header from "./header/Header.jsx";
 import Footer from "./footer/Footer.jsx";
+import BlackLine from "./header/blackLine/BlackLine.jsx";
 //
 import Products from "./pages/Products.jsx";
 
@@ -19,6 +20,7 @@ function App() {
   return (
     <>
       <Router>
+        <BlackLine/>
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />

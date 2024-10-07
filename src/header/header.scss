@@ -3,7 +3,7 @@
 
 header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: $background-color;
   color: $accent-color;
@@ -13,6 +13,9 @@ header {
   z-index: 99999;
   box-sizing: border-box;
   transition: transform 0.3s ease-in-out;
+  padding: 0 20px 0 20px;
+  // 
+  margin-top: 50px;
   .logo{
     
   }
@@ -25,7 +28,7 @@ header {
 }
 // 
 .header.hide {
-  transform: translateY(-90%);
+  transform: translateY(-70%);
 }
 
 .header.show {
