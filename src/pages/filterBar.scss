@@ -1,0 +1,107 @@
+$primary-color: #ffffff;
+$secondary-color: #e0e0e0;
+
+.filter-bar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: $primary-color;
+  border-radius: 8px;
+  border: 1px solid $secondary-color;
+  max-width: 100%;
+
+  .dropdown {
+    position: relative;
+    width: 100%;
+
+    button {
+      padding: 10px;
+      width: 100%;
+      font-size: 14px;
+      text-align: left;
+      background-color: $primary-color;
+      color: #333;
+      border: 1px solid $secondary-color;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      // &:hover {
+      //   background-color: darken($secondary-color, 10%);
+      // }
+
+      &:after {
+        content: "\25BC"; /* Mũi tên chỉ xuống */
+        float: right;
+      }
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      width: 100%;
+      background-color: $primary-color;
+      border: 1px solid $secondary-color;
+      border-radius: 5px;
+      z-index: 1;
+      max-height: 200px;
+      overflow-y: auto;
+
+      li {
+        padding: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        // &:hover {
+        //   background-color: darken($secondary-color, 10%);
+        // }
+      }
+    }
+
+    &.open .dropdown-menu {
+      display: block;
+    }
+  }
+
+  input[type="range"] {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid $secondary-color;
+    border-radius: 5px;
+    background-color: $primary-color;
+    color: #333;
+    flex: 1;
+
+    // &:focus {
+    //   outline: none;
+    //   border-color: darken($secondary-color, 10%);
+    // }
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: $secondary-color;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    // &:hover {
+    //   background-color: darken($secondary-color, 10%);
+    // }
+  }
+
+  .clear-filters {
+    // margin-top: 10px;
+    background-color: #dc3545; /* Màu đỏ cho nút xoá filter */
+    color: #fff;
+
+    // &:hover {
+    //   background-color: darken(#dc3545, 10%);
+    // }
+  }
+}
