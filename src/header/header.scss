@@ -16,21 +16,31 @@ header {
   padding: 0 20px 0 20px;
   // 
   margin-top: 50px;
-  .logo{
-    
-  }
-
+ 
   button{
     border: none;
     background: none;
     font-size: 20px;
+    @include respond-to(tablet){
+      display: none;
+    }
   }
 }
 // 
-.header.hide {
-  transform: translateY(-70%);
-}
+// .header.hide {
+//   transform: translateY(-70%);
+// }
 
-.header.show {
-  transform: translateY(0);
+// .header.show {
+//   transform: translateY(0);
+// }
+// Ẩn header khi cuộn trang chỉ áp dụng cho mobile
+@media (max-width: 767px) {
+  .header.hide {
+    transform: translateY(-70%); // Đảm bảo header bị ẩn hoàn toàn
+  }
+
+  .header.show {
+    transform: translateY(0);
+  }
 }

@@ -3,18 +3,23 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./nav.scss"
 
-const Nav = ({isOpen}) => {
+const Nav = ({isOpen, toggleMenu}) => {
+   const handleMenuItemClick = () => {
+    // Đóng menu khi một mục được chọn
+    toggleMenu();
+   };
+
   return (
     <nav className={`menu ${isOpen ? 'active' : ''}`}>
         <ul>
-          <li><Link to ="/">TRANG CHỦ</Link></li>
-          <li><Link to="/about">VỀ CHÚNG TÔI</Link></li>
-          <li><Link to="/products">SẢN PHẨM</Link></li>
-          <li><Link to="/news">TIN TỨC</Link></li>
-          <li><Link to="/contacts">LIÊN HỆ</Link></li>        
+          <li onClick={handleMenuItemClick}><Link to ="/">TRANG CHỦ</Link></li>
+          <li onClick={handleMenuItemClick}><Link to="/about">VỀ CHÚNG TÔI</Link></li>
+          <li onClick={handleMenuItemClick}><Link to="/products">SẢN PHẨM</Link></li>
+          <li onClick={handleMenuItemClick}><Link to="/news">TIN TỨC</Link></li>
+          <li onClick={handleMenuItemClick}><Link to="/contacts">LIÊN HỆ</Link></li>        
         </ul>
       </nav>
   )
 }
 
-export default Nav
+export default Nav;
