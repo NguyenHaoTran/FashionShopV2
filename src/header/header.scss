@@ -5,7 +5,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: $background-color;
+  // background-color: $background-color;
+  background-color: rgb(253, 251, 248);
   color: $accent-color;
   position: fixed;
   width: 100%;
@@ -27,20 +28,10 @@ header {
   }
 }
 // 
-// .header.hide {
-//   transform: translateY(-70%);
-// }
+.header.hide {
+  transform: translateY(-70%);
+}
 
-// .header.show {
-//   transform: translateY(0);
-// }
-// Ẩn header khi cuộn trang chỉ áp dụng cho mobile
-@media (max-width: 767px) {
-  .header.hide {
-    transform: translateY(-70%); // Đảm bảo header bị ẩn hoàn toàn
-  }
-
-  .header.show {
-    transform: translateY(0);
-  }
+.header.show {
+  transform: translateY(0);
 }

@@ -1,214 +1,229 @@
 @import "../styles/main.scss";
 
 .News {
-    width: 100%;
-    height: auto;
-    padding-top: 120px;
+  width: 100%;
+  height: auto;
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .banner {
+    background-color: rgb(233, 233, 233);
+    padding: 120px 0px 120px 0px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
+    width: 100%;
 
-    .banner {
-        background-color: rgb(233, 233, 233);
-        padding: 120px 0px 120px 0px;
+    .p_banner {
+      margin-top: 30px;
+      font-size: 50px;
+    }
+
+    .selection {
+      a {
+        font-size: 13px;
+        margin: 10px;
+      }
+    }
+  }
+
+  .news_contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 30px;
+    min-height: 100vh;
+    @include respond-to(tablet) {
+      flex-direction: row;
+      max-width: 90%;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+    @include respond-to(desktop) {
+        max-width: 60%;
+    }
+
+    .contents {
+      margin: 30px;
+      width: 80%;
+
+      .news-item {
+        background-color: rgb(244, 242, 242);
         display: flex;
-        justify-content: center;
-        align-items: center;
         flex-direction: column;
-        width: 100%;
+        text-align: left;
+        border: 1px solid;
+        border-radius: 10px;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: background-color 0.5s ease;
 
-        .p_banner {
-            margin-top: 30px;
-            font-size: 50px;
+        &:hover {
+          background-color: #e1e1e1; // Màu nền khi hover chuột vào phần tử
         }
-
-        .selection {
-            a {
-                font-size: 13px;
-                margin: 10px;
-            }
-        }
-    }
-
-    .news_contents {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
-        padding-top: 30px;
-
-        .contents {
-            margin: 30px;
-            width: 80%;
-
-            .news-item {
-                background-color: rgb(244, 242, 242);
-                display: flex;
-                flex-direction: column;
-                text-align: left;
-                border: 1px solid;
-                border-radius: 10px;
-                margin-top: 20px;
-                cursor: pointer;
-                transition: background-color 0.5s ease;
-
-                &:hover {
-                    background-color: #e1e1e1; // Màu nền khi hover chuột vào phần tử
-                }
-
-                img {
-                    width: 100%;
-                    border-radius: 10px 10px 0 0;
-                }
-
-                h3 {
-                    font-size: 20px;
-                    font-weight: 500;
-                    padding: 20px 30px 0 30px;
-                }
-
-                p {
-                    padding: 0 35px 50px 35px;
-                    color: rgb(96, 96, 96);
-                    letter-spacing: 1px;
-                    line-height: 1.5;
-                }
-
-                .end {
-                    display: flex;
-                    justify-content: space-around;
-                    align-items: center;
-                    border-top: 1px solid;
-                    height: 50px;
-                }
-            }
-        }
-
-        .sideBar {
-            width: 100%;
-            position: sticky;
-            top: 30px; // Cách đỉnh của viewport 30px khi sticky
-            align-self: center; // Giúp sideBar dính ở phía trên nội dung khi cuộn
-            margin-top: 50px;
-
-            .category {
-                margin-top: 25px;
-                margin-bottom: 25px;
-                padding: 0 25px 0 25px;
-
-                h3 {
-                    font-size: 1.2rem;
-                    margin-bottom: 10px;
-                }
-
-                .filterButtons {
-                    display: flex;
-                    flex-wrap: wrap;
-
-                    button {
-                        padding: 10px 20px;
-                        margin: 5px;
-                        font-size: 1rem;
-                        border-radius: 10px;
-                        cursor: pointer;
-                        border: none;
-                        background-color: #f0f0f0;
-                        transition: background-color 0.3s ease;
-
-                        &.active {
-                            background-color: #ccc;
-                        }
-
-                        &:hover {
-                            background-color: #e1e1e1;
-                        }
-                    }
-                }
-            }
-
-            .newBlog {
-                width: 100%;
-                padding: 0 25px 0 25px;
-                h3 {
-                    font-weight: 600;
-                }
-
-                .item {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border-top: 1px solid;
-                    padding: 10px;
-                    cursor: pointer;
-                    transition: background-color 0.5s ease;
-
-                    &:hover {
-                        background-color: #f0f0f0; // Màu nền khi hover chuột vào phần tử
-                    }
-
-                    img {
-                        width: 100px;
-                        height: 100px;
-                        overflow: hidden;
-                        object-fit: cover;
-                        margin-left: 10px;
-                    }
-
-                    .texts {
-                        margin-left: 10px;
-                        margin-right: 10px;
-                        padding-bottom: 20px;
-
-                        b {
-                            font-weight: 300;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .popup-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
-    }
-
-    .popup-content {
-        background-color: white;
-        padding: 20px;
-        border-radius: 5px;
-        width: 90%;
-        max-height: 70%;
-        overflow-y: auto;
 
         img {
-            width: 100%;
-            border-radius: 15px;
+          width: 100%;
+          border-radius: 10px 10px 0 0;
+        }
+
+        h3 {
+          font-size: 20px;
+          font-weight: 500;
+          padding: 20px 30px 0 30px;
         }
 
         p {
-            font-size: 20px;
-            line-height: 1.5;
-            padding: 30px;
+          padding: 0 35px 50px 35px;
+          color: rgb(96, 96, 96);
+          letter-spacing: 1px;
+          line-height: 1.5;
         }
+
+        .end {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          border-top: 1px solid;
+          height: 50px;
+        }
+      }
     }
 
-    .close-button {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background: none;
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
+    .sideBar {
+      position: relative;
+      width: 100%;
+      margin-top: 50px;
+      @include respond-to(tablet){
+        width: 70%;
+        position: sticky;
+        top: 30px;
+        margin-top: 25px;
+        align-self: flex-start;
+      }
+      .category {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        padding: 0 25px 0 25px;
+
+        h3 {
+          font-size: 30px;
+          margin-bottom: 10px;
+          
+        }
+
+        .filterButtons {
+          display: flex;
+          flex-wrap: wrap;
+
+          button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            border: none;
+            background-color: #f0f0f0;
+            transition: background-color 0.3s ease;
+
+            &.active {
+              background-color: #ccc;
+            }
+
+            &:hover {
+              background-color: #e1e1e1;
+            }
+          }
+        }
+      }
+
+      .newBlog {
+        width: 100%;
+        padding: 0 25px 0 25px;
+        h3 {
+          font-weight: 600;
+        }
+
+        .item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-top: 1px solid;
+          padding: 10px;
+          cursor: pointer;
+          transition: background-color 0.5s ease;
+
+          &:hover {
+            background-color: #f0f0f0; // Màu nền khi hover chuột vào phần tử
+          }
+
+          img {
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            object-fit: cover;
+            margin-left: 10px;
+          }
+
+          .texts {
+            margin-left: 10px;
+            margin-right: 10px;
+            padding-bottom: 20px;
+
+            b {
+              font-weight: 300;
+              font-size: 15px;
+            }
+          }
+        }
+      }
     }
+  }
+
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 90%;
+    max-height: 70%;
+    overflow-y: auto;
+
+    img {
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.5;
+      padding: 30px;
+    }
+  }
+
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
 }
