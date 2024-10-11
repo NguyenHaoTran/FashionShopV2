@@ -4,6 +4,10 @@
   width: 100%;
   height: auto;
   padding-top: 120px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 
   .banner {
     background-color: rgb(233, 233, 233);
@@ -33,6 +37,12 @@
   flex-direction: column;
   align-items: center;
   padding: 50px;
+  @include respond-to(tablet) {
+    flex-direction: row;
+  }
+  @include respond-to(desktop) {
+    max-width: 80%;
+  }
 
   .imgs img {
     width: 100%;
@@ -43,6 +53,10 @@
     padding-top: 30px;
     max-width: 100%;
     text-align: center;
+    @include respond-to(tablet) {
+      padding-left: 50px;
+      max-width: 60%;
+    }
 
     .b_text {
       font-size: 35px;
@@ -89,6 +103,12 @@
   padding: 50px;
   width: 100%;
   height: 100%;
+  @include respond-to(tablet) {
+    flex-direction: row;
+  }
+    @include respond-to(desktop) {
+      max-width: 80%;
+    }
 
   .about_end_text {
     max-width: 100%;
@@ -96,6 +116,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @include respond-to(tablet) {
+      padding-right: 50px;
+    }
     .b_text {
       text-align: center;
       font-size: 35px;

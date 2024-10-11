@@ -36,12 +36,12 @@
     flex-direction: column;
     width: 100%;
     padding-top: 30px;
-    min-height: 100vh;
+    height: 100%;
     @include respond-to(tablet) {
       flex-direction: row;
       max-width: 90%;
       align-items: flex-start;
-      min-height: 100vh;
+      height: 100%;
     }
     @include respond-to(desktop) {
         max-width: 60%;
@@ -95,15 +95,15 @@
     }
 
     .sideBar {
-      position: relative;
       width: 100%;
       margin-top: 50px;
       @include respond-to(tablet){
         width: 70%;
         position: sticky;
-        top: 30px;
+        top: 10px;
         margin-top: 25px;
         align-self: flex-start;
+        height: 100%;
       }
       .category {
         margin-top: 25px;
@@ -204,6 +204,10 @@
     width: 90%;
     max-height: 70%;
     overflow-y: auto;
+    @include respond-to(tablet){
+      max-height: 90%;
+      margin-top: 55px;
+    }
 
     img {
       width: 100%;

@@ -1,6 +1,5 @@
 @import "../styles/main.scss";
 
-
 header {
   display: flex;
   justify-content: space-between;
@@ -15,19 +14,37 @@ header {
   box-sizing: border-box;
   transition: transform 0.3s ease-in-out;
   padding: 0 20px 0 20px;
-  // 
+  //
   margin-top: 50px;
- 
-  button{
+
+  button {
     border: none;
     background: none;
     font-size: 20px;
-    @include respond-to(tablet){
+    @include respond-to(tablet) {
       display: none;
     }
   }
+
+  .tools {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99998;
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      color: black;
+
+      &:focus {
+        outline: none; // Loại bỏ đường viền khi focus vào button (tuỳ chọn)
+      }
+    }
+  }
 }
-// 
+//
 .header.hide {
   transform: translateY(-70%);
 }

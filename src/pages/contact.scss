@@ -14,6 +14,12 @@
     align-items: center;
     width: 100%;
     padding: 0 25px 0 25px;
+    @include respond-to(tablet) {
+      flex-direction: row;
+    }
+    @include respond-to(desktop) {
+      width: 70%;
+    }
 
     .texts {
       width: 100%;
@@ -49,6 +55,9 @@
       img {
         width: 100%;
         border-radius: 20px;
+        @include respond-to(desktop) {
+          width: 60%;
+        }
       }
     }
   }
