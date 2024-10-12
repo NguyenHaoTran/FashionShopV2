@@ -27,7 +27,7 @@ const Nav = ({ isOpen, toggleMenu }) => {
   return (
     <nav className={`menu ${isOpen ? 'active' : ''}`}>
       <ul>
-        <li onClick={handleMenuItemClick}><Link to="/FashionShopV2/home">TRANG CHỦ</Link></li>
+        <li onClick={handleMenuItemClick}><Link to="/FashionShopV2/">TRANG CHỦ</Link></li>
         <li onClick={handleMenuItemClick}><Link to="/FashionShopV2/about">VỀ CHÚNG TÔI</Link></li>
         <li onClick={handleMenuItemClick}><Link to="/FashionShopV2/products">SẢN PHẨM</Link></li>
         <li onClick={handleMenuItemClick}><Link to="/FashionShopV2/news">TIN TỨC</Link></li>

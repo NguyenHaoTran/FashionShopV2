@@ -40,7 +40,7 @@ const Home = () => {
           <div className="items">
             <div className="text">
               <h1>
-                Đón xuân <br/> COLLECTION
+                Đón xuân <br /> COLLECTION
               </h1>
               <button>
                 Đến ngay
@@ -53,7 +53,8 @@ const Home = () => {
           </div>
           {/*  */}
           <div className="img imgBanner_home">
-            <img src="/FashionShopV2/public/1x1_menu.webp" />
+            <img src="https://raw.githubusercontent.com/NguyenHaoTran/FashionShopV2/main/public/1x1_menu.webp
+" />
           </div>
           {/*  */}
         </div>
@@ -153,11 +154,30 @@ const Home = () => {
             <b>2025</b>
           </div>
           <div className="brands">
-            <img src="/FashionShopV2/public/logoBrands/Alexander-McQueen.png" alt="" />
-            <img src="/FashionShopV2/public/logoBrands/Balmain Paris.png" alt="" />
-            <img src="/FashionShopV2/public/logoBrands/Burberry Group.png" alt="" />
-            <img src="/FashionShopV2/public/logoBrands/hermes.png" alt="" />
-            <img src="/FashionShopV2/public/logoBrands/prada.png" alt="" />
+            <img
+              src="https://raw.githubusercontent.com/NguyenHaoTran/FashionShopV2/main/public/logoBrands/Alexander-McQueen.png
+"
+              alt=""
+            />
+            <img
+              src="https://raw.githubusercontent.com/NguyenHaoTran/FashionShopV2/main/public/logoBrands/Balmain%20Paris.png
+"
+              alt=""
+            />
+            <img
+              src="https://raw.githubusercontent.com/NguyenHaoTran/FashionShopV2/main/public/logoBrands/Burberry%20Group.png
+"
+              alt=""
+            />
+            <img
+              src="https://github.com/NguyenHaoTran/FashionShopV2/blob/main/public/logoBrands/hermes.png"
+              alt=""
+            />
+            <img
+              src="https://raw.githubusercontent.com/NguyenHaoTran/FashionShopV2/main/public/logoBrands/prada.png
+"
+              alt=""
+            />
           </div>
         </div>
         <div className="instagram">
@@ -166,7 +186,10 @@ const Home = () => {
               <InstagramIcon />
             </div>
             <div className="ig_img">
-              <img src="/FashionShopV2/public/ig_imgs/ig_img_1.webp" alt="" />
+              <img
+                src="https://raw.githubusercontent.com/NguyenHaoTran/FashionShopV2/refs/heads/main/public/ig_imgs/ig_img_1.webp"
+                alt=""
+              />
             </div>
           </div>
           <div className="box">
@@ -174,7 +197,10 @@ const Home = () => {
               <InstagramIcon />
             </div>
             <div className="ig_img">
-              <img src="/FashionShopV2/public/ig_imgs/ig_img_2.webp" alt="" />
+              <img
+                src="https://raw.githubusercontent.com/NguyenHaoTran/FashionShopV2/refs/heads/main/public/ig_imgs/ig_img_2.webp"
+                alt=""
+              />
             </div>
           </div>
           <div className="box">
@@ -182,7 +208,10 @@ const Home = () => {
               <InstagramIcon />
             </div>
             <div className="ig_img">
-              <img src="/FashionShopV2/public/ig_imgs/ig_img_3.webp" alt="" />
+              <img
+                src="https://raw.githubusercontent.com/NguyenHaoTran/FashionShopV2/refs/heads/main/public/ig_imgs/ig_img_3.webp"
+                alt=""
+              />
             </div>
           </div>
           <div className="box">
@@ -190,7 +219,10 @@ const Home = () => {
               <InstagramIcon />
             </div>
             <div className="ig_img">
-              <img src="/FashionShopV2/public/ig_imgs/ig_img_4.webp" alt="" />
+              <img
+                src="https://raw.githubusercontent.com/NguyenHaoTran/FashionShopV2/refs/heads/main/public/ig_imgs/ig_img_4.webp"
+                alt=""
+              />
             </div>
           </div>
           <div className="box">
@@ -198,7 +230,10 @@ const Home = () => {
               <InstagramIcon />
             </div>
             <div className="ig_img">
-              <img src="/FashionShopV2/public/ig_imgs/ig_img_5.webp" alt="" />
+              <img
+                src="https://raw.githubusercontent.com/NguyenHaoTran/FashionShopV2/refs/heads/main/public/ig_imgs/ig_img_5.webp"
+                alt=""
+              />
             </div>
           </div>
         </div>

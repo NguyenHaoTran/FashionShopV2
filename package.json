@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://nguyenhaotran.github.io/FashionShopV2/home",
+  "homepage": "https://nguyenhaotran.github.io/FashionShopV2/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

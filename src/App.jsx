@@ -23,7 +23,7 @@ function App() {
         <BlackLine/>
         <Header />
         <Routes>
-          <Route path="/FashionShopV2/home" element={<Home />} />
+          <Route path="/FashionShopV2/" element={<Home />} />
           <Route path="/FashionShopV2/about" element={<About />} />
           <Route path="/FashionShopV2/products" element={<Products />} />
           <Route path="/FashionShopV2/news" element={<News />} />
