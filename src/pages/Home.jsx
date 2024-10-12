@@ -53,8 +53,10 @@ const Home = () => {
           </div>
           {/*  */}
           <div className="img imgBanner_home">
-            <img src="https://raw.githubusercontent.com/NguyenHaoTran/FashionShopV2/main/public/1x1_menu.webp
-" />
+            <img
+              src="https://raw.githubusercontent.com/NguyenHaoTran/FashionShopV2/main/public/1x1_menu.webp
+"
+            />
           </div>
           {/*  */}
         </div>
@@ -170,7 +172,8 @@ const Home = () => {
               alt=""
             />
             <img
-              src="https://github.com/NguyenHaoTran/FashionShopV2/blob/main/public/logoBrands/hermes.png"
+              src="https://raw.githubusercontent.com/NguyenHaoTran/FashionShopV2/main/public/logoBrands/hermes.png
+"
               alt=""
             />
             <img
