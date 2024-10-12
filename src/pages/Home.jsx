@@ -53,7 +53,7 @@ const Home = () => {
           </div>
           {/*  */}
           <div className="img imgBanner_home">
-            <img src="/public/1x1_menu.webp" />
+            <img src="/FashionShopV2/public/1x1_menu.webp" />
           </div>
           {/*  */}
         </div>
@@ -149,15 +149,15 @@ const Home = () => {
           <div className="sub_name">Founder & CEO</div>
           <div className="note_imgs">
             <p>COLLECTION</p>
-            <img src="/900x420_img_2.avif" alt="" />
+            <img src="/FashionShopV2/900x420_img_2.avif" alt="" />
             <b>2025</b>
           </div>
           <div className="brands">
-            <img src="/public/logoBrands/Alexander-McQueen.png" alt="" />
-            <img src="/public/logoBrands/Balmain Paris.png" alt="" />
-            <img src="/public/logoBrands/Burberry Group.png" alt="" />
-            <img src="/public/logoBrands/hermes.png" alt="" />
-            <img src="/public/logoBrands/prada.png" alt="" />
+            <img src="/FashionShopV2/public/logoBrands/Alexander-McQueen.png" alt="" />
+            <img src="/FashionShopV2/public/logoBrands/Balmain Paris.png" alt="" />
+            <img src="/FashionShopV2/public/logoBrands/Burberry Group.png" alt="" />
+            <img src="/FashionShopV2/public/logoBrands/hermes.png" alt="" />
+            <img src="/FashionShopV2/public/logoBrands/prada.png" alt="" />
           </div>
         </div>
         <div className="instagram">
@@ -166,7 +166,7 @@ const Home = () => {
               <InstagramIcon />
             </div>
             <div className="ig_img">
-              <img src="/public/ig_imgs/ig_img_1.webp" alt="" />
+              <img src="/FashionShopV2/public/ig_imgs/ig_img_1.webp" alt="" />
             </div>
           </div>
           <div className="box">
@@ -174,7 +174,7 @@ const Home = () => {
               <InstagramIcon />
             </div>
             <div className="ig_img">
-              <img src="/public/ig_imgs/ig_img_2.webp" alt="" />
+              <img src="/FashionShopV2/public/ig_imgs/ig_img_2.webp" alt="" />
             </div>
           </div>
           <div className="box">
@@ -182,7 +182,7 @@ const Home = () => {
               <InstagramIcon />
             </div>
             <div className="ig_img">
-              <img src="/public/ig_imgs/ig_img_3.webp" alt="" />
+              <img src="/FashionShopV2/public/ig_imgs/ig_img_3.webp" alt="" />
             </div>
           </div>
           <div className="box">
@@ -190,7 +190,7 @@ const Home = () => {
               <InstagramIcon />
             </div>
             <div className="ig_img">
-              <img src="/public/ig_imgs/ig_img_4.webp" alt="" />
+              <img src="/FashionShopV2/public/ig_imgs/ig_img_4.webp" alt="" />
             </div>
           </div>
           <div className="box">
@@ -198,7 +198,7 @@ const Home = () => {
               <InstagramIcon />
             </div>
             <div className="ig_img">
-              <img src="/public/ig_imgs/ig_img_5.webp" alt="" />
+              <img src="/FashionShopV2/public/ig_imgs/ig_img_5.webp" alt="" />
             </div>
           </div>
         </div>

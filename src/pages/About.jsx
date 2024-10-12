@@ -91,7 +91,7 @@ const About = () => {
           </button>
         </div>
         <div className="about_end_imgs">
-          <img src="/imgs/thumb.jpeg" alt="" />
+          <img src="FashionShopV2/imgs/thumb.jpeg" alt="" />
         </div>
       </div>
     </div>

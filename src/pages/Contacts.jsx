@@ -39,7 +39,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="img">
-          <img src="/1x1_img_1.webp" alt="" />
+          <img src="/FashionShopV2/1x1_img_1.webp" alt="" />
         </div>
       </div>
     </div>

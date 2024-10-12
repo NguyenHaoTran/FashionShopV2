@@ -43,12 +43,12 @@ const Header = () => {
       <button className="menu_toggle" onClick={toggleMenu}>
         <i className="ri-menu-line"></i>
       </button> 
-      <div className="tools">
+      {/* <div className="tools">
         <button className="search-btn" onClick={openSearch}>
             <SearchOutlinedIcon className="search-icon" />
             <Search />
         </button>
-      </div>      
+      </div>       */}
     </header>
     <Search isVisible={isSearchVisible} onClose={closeSearch} />
     </>

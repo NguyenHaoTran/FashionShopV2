@@ -106,9 +106,9 @@
   @include respond-to(tablet) {
     flex-direction: row;
   }
-    @include respond-to(desktop) {
-      max-width: 80%;
-    }
+  @include respond-to(desktop) {
+    max-width: 80%;
+  }
 
   .about_end_text {
     max-width: 100%;

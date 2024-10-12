@@ -27,11 +27,11 @@ const Nav = ({ isOpen, toggleMenu }) => {
   return (
     <nav className={`menu ${isOpen ? 'active' : ''}`}>
       <ul>
-        <li onClick={handleMenuItemClick}><Link to="/">TRANG CHỦ</Link></li>
-        <li onClick={handleMenuItemClick}><Link to="/about">VỀ CHÚNG TÔI</Link></li>
-        <li onClick={handleMenuItemClick}><Link to="/products">SẢN PHẨM</Link></li>
-        <li onClick={handleMenuItemClick}><Link to="/news">TIN TỨC</Link></li>
-        <li onClick={handleMenuItemClick}><Link to="/contacts">LIÊN HỆ</Link></li>        
+        <li onClick={handleMenuItemClick}><Link to="/FashionShopV2/home">TRANG CHỦ</Link></li>
+        <li onClick={handleMenuItemClick}><Link to="/FashionShopV2/about">VỀ CHÚNG TÔI</Link></li>
+        <li onClick={handleMenuItemClick}><Link to="/FashionShopV2/products">SẢN PHẨM</Link></li>
+        <li onClick={handleMenuItemClick}><Link to="/FashionShopV2/news">TIN TỨC</Link></li>
+        <li onClick={handleMenuItemClick}><Link to="/FashionShopV2/contacts">LIÊN HỆ</Link></li>        
       </ul>
     </nav>
   );
