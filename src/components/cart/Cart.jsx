@@ -9,8 +9,8 @@ const Cart = ({ cartItems, removeFromCart }) => {
         <p>Giỏ hàng trống</p>
       ) : (
         <ul>
-          {cartItems.map((item) => (
-            <li key={item.id}>
+          {cartItems.map((item, index) => (
+            <li key={`${item.id}-${index}`}>
               <div className="cart-item">
                 <img src={item.imgUrl} alt={item.name} />
                 <div className="cart-details">

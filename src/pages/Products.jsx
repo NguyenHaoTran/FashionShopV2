@@ -2,14 +2,18 @@ import { useState, useCallback, useEffect } from "react";
 import ProductsList from "./ProductsList";
 import ProductsDetail from "./ProductsDetail";
 import FilterBar from "./FilterBar";
-import Cart from "../components/cart/Cart"
+import Cart from "../components/cart/Cart";
 import productsData from "../Data/products.json";
 import "./products.scss";
 
 const Products = () => {
   const [filteredProducts, setFilteredProducts] = useState(productsData);
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const [cartItems, setCartItems] = useState([]);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const [cartItems, setCartItems] = useState(() => {
+    const savedCart = localStorage.getItem("cartItems");
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
 
   const handleFilter = useCallback((filters) => {
     let filtered = productsData;
@@ -40,11 +44,15 @@ const Products = () => {
   }, []);
 
   const addToCart = (product) => {
-    setCartItems((prevItems) => [...prevItems, product]);
+    const updatedCart = [...cartItems, product];
+    setCartItems(updatedCart);
+    localStorage.setItem("cartItems", JSON.stringify(updatedCart));
   };
 
   const removeFromCart = (id) => {
-    setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
+    const updatedCart = cartItems.filter((item) => item.id !== id);
+    setCartItems(updatedCart);
+    localStorage.setItem("cartItems", JSON.stringify(updatedCart));
   };
 
   useEffect(() => {
@@ -58,6 +66,10 @@ const Products = () => {
       document.body.classList.remove("no-scroll");
     };
   }, [selectedProduct]);
+
+  const toggleCart = () => {
+    setIsCartOpen((prevState) => !prevState);
+  };
 
   return (
     <>
@@ -80,9 +92,20 @@ const Products = () => {
             addToCart={addToCart}
           />
         </div>
-        <div className="cart">
-          <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
-        </div>
+        <button className="cart-button" onClick={toggleCart}>
+          Mở Giỏ Hàng
+        </button>
+        {isCartOpen && (
+          <div className="cart-popup">
+            <div className="cart-overlay" onClick={toggleCart}></div>
+            <div className="cart-content">
+              <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
+              <button className="close-cart" onClick={toggleCart}>
+                Đóng Giỏ Hàng
+              </button>
+            </div>
+          </div>
+        )}
         {selectedProduct && (
           <div
             className="modal-overlay"

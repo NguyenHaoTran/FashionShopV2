@@ -3,7 +3,7 @@ import Nav from "./nav/Nav.jsx";
 import "./header.scss";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import Search from "../header/search/Search.jsx";
-import Cart from "../components/cart/Cart.jsx" // Import component Cart
+import Cart from "../components/cart/Cart.jsx"; // Import component Cart
 
 const Header = ({ cartItems, updateCartItem, removeCartItem, clearCart }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,28 +48,30 @@ const Header = ({ cartItems, updateCartItem, removeCartItem, clearCart }) => {
           <i className="ri-menu-line"></i>
         </button>
         <div className="tools">
-          <button className="search-btn" onClick={openSearch}>
-            <SearchOutlinedIcon className="search-icon" />
-          </button>
           <button className="cart-btn" onClick={toggleCart}>
-            Cart ({cartItems.length})
+            <i className="ri-shopping-cart-2-line"></i> ({cartItems.length})
           </button>
         </div>
       </header>
-      <Search isVisible={isSearchVisible} onClose={closeSearch} />
+
       {isCartOpen && (
         <div className="cart-popup">
-          <button className="close-cart" onClick={toggleCart}>
-            Close
-          </button>
-          <Cart
-            cartItems={cartItems}
-            updateCartItem={updateCartItem}
-            removeCartItem={removeCartItem}
-            clearCart={clearCart}
-          />
+          <div className="cart-overlay" onClick={toggleCart}></div>
+          <div className="cart-content">
+            <Cart
+              cartItems={cartItems}
+              updateCartItem={updateCartItem}
+              removeCartItem={removeCartItem}
+              clearCart={clearCart}
+            />
+            <button className="close-cart" onClick={toggleCart}>
+              Đóng Giỏ Hàng
+            </button>
+          </div>
         </div>
       )}
+
+      <Search isVisible={isSearchVisible} onClose={closeSearch} />
     </>
   );
 };

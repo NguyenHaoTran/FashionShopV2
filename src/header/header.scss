@@ -57,20 +57,42 @@ header {
 // cart
 .cart-popup {
   position: fixed;
-  top: 70px;
-  right: 20px;
-  background-color: white;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 300px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1000;
-  padding: 1rem;
+}
 
-  .close-cart {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    float: right;
-  }
+.cart-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.cart-content {
+  position: relative;
+  width: 400px;
+  max-width: 90%;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  z-index: 1001;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-cart {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  display: block;
+  margin-left: auto;
 }
