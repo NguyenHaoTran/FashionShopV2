@@ -52,3 +52,25 @@ header {
 .header.show {
   transform: translateY(0);
 }
+
+
+// cart
+.cart-popup {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  z-index: 1000;
+  padding: 1rem;
+
+  .close-cart {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    float: right;
+  }
+}

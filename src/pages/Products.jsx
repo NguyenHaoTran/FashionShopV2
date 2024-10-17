@@ -2,7 +2,7 @@ import { useState, useCallback, useEffect } from "react";
 import ProductsList from "./ProductsList";
 import ProductsDetail from "./ProductsDetail";
 import FilterBar from "./FilterBar";
-// import Cart from "../../components/header/cart/Cart.jsx";
+import Cart from "../components/cart/Cart"
 import productsData from "../Data/products.json";
 import "./products.scss";
 
@@ -40,14 +40,13 @@ const Products = () => {
   }, []);
 
   const addToCart = (product) => {
-    setCartItems([...cartItems, product]);
+    setCartItems((prevItems) => [...prevItems, product]);
   };
 
   const removeFromCart = (id) => {
-    setCartItems(cartItems.filter((item) => item.id !== id));
+    setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
   };
 
-  // Effect để thêm hoặc gỡ lớp no-scroll khi modal mở ra
   useEffect(() => {
     if (selectedProduct) {
       document.body.classList.add("no-scroll");
@@ -55,7 +54,6 @@ const Products = () => {
       document.body.classList.remove("no-scroll");
     }
 
-    // Cleanup function để gỡ lớp khi component bị hủy
     return () => {
       document.body.classList.remove("no-scroll");
     };
@@ -82,11 +80,9 @@ const Products = () => {
             addToCart={addToCart}
           />
         </div>
-        {/* <div className="cart">
-        <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
-      </div>
-       */}
-        {/* detail_popup */}
+        <div className="cart">
+          <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
+        </div>
         {selectedProduct && (
           <div
             className="modal-overlay"
@@ -94,7 +90,7 @@ const Products = () => {
           >
             <div
               className="modal-content"
-              onClick={(e) => e.stopPropagation()} // Để ngăn chặn sự kiện click đóng popup khi click vào bên trong modal
+              onClick={(e) => e.stopPropagation()}
             >
               <ProductsDetail
                 product={selectedProduct}

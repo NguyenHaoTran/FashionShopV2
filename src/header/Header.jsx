@@ -2,19 +2,23 @@ import React, { useState, useEffect } from "react";
 import Nav from "./nav/Nav.jsx";
 import "./header.scss";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-import Search from "../header/search/Search.jsx"
+import Search from "../header/search/Search.jsx";
+import Cart from "../components/cart/Cart.jsx" // Import component Cart
 
-const Header = () => {
+const Header = ({ cartItems, updateCartItem, removeCartItem, clearCart }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false); // State để mở/đóng giỏ hàng
+  const [showHeader, setShowHeader] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(window.scrollY);
+  const [isSearchVisible, setSearchVisible] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  // scroll_hide
-  const [showHeader, setShowHeader] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(window.scrollY);
-  const [isSearchVisible, setSearchVisible] = useState(false);
+  const toggleCart = () => {
+    setIsCartOpen(!isCartOpen);
+  };
 
   const controlHeader = () => {
     if (window.scrollY > lastScrollY) {
@@ -32,25 +36,40 @@ const Header = () => {
     };
   }, [lastScrollY]);
 
-    const openSearch = () => setSearchVisible(true);
+  const openSearch = () => setSearchVisible(true);
   const closeSearch = () => setSearchVisible(false);
 
   return (
     <>
-    <header className={`header ${showHeader ? "show" : "hide"}`}>
-      <div className="logo">LOGO</div>
-      <Nav isOpen={isOpen} toggleMenu={toggleMenu} />
-      <button className="menu_toggle" onClick={toggleMenu}>
-        <i className="ri-menu-line"></i>
-      </button> 
-      {/* <div className="tools">
-        <button className="search-btn" onClick={openSearch}>
-            <SearchOutlinedIcon className="search-icon" />
-            <Search />
+      <header className={`header ${showHeader ? "show" : "hide"}`}>
+        <div className="logo">LOGO</div>
+        <Nav isOpen={isOpen} toggleMenu={toggleMenu} />
+        <button className="menu_toggle" onClick={toggleMenu}>
+          <i className="ri-menu-line"></i>
         </button>
-      </div>       */}
-    </header>
-    <Search isVisible={isSearchVisible} onClose={closeSearch} />
+        <div className="tools">
+          <button className="search-btn" onClick={openSearch}>
+            <SearchOutlinedIcon className="search-icon" />
+          </button>
+          <button className="cart-btn" onClick={toggleCart}>
+            Cart ({cartItems.length})
+          </button>
+        </div>
+      </header>
+      <Search isVisible={isSearchVisible} onClose={closeSearch} />
+      {isCartOpen && (
+        <div className="cart-popup">
+          <button className="close-cart" onClick={toggleCart}>
+            Close
+          </button>
+          <Cart
+            cartItems={cartItems}
+            updateCartItem={updateCartItem}
+            removeCartItem={removeCartItem}
+            clearCart={clearCart}
+          />
+        </div>
+      )}
     </>
   );
 };
