@@ -6,7 +6,8 @@
     "id": 1,
     "category": "Đồ nam",
     "color": "xanh",
-    "size": "M"
+    "size": "M",
+    "isBestSeller": true
   },
   {
     "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/FLGLO4FAL12-BEIBR?wid=700&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
@@ -15,7 +16,8 @@
     "id": 2,
     "category": "Giày",
     "color": "trắng",
-    "size": "L"
+    "size": "L",
+    "isBestSeller": false
   },
   {
     "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/HWVG6216060-TAN?wid=700&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
@@ -24,7 +26,8 @@
     "id": 3,
     "category": "Túi",
     "color": "đen",
-    "size": "S"
+    "size": "S",
+    "isBestSeller": true
   },
   {
     "imgUrl": "http://guesseu.scene7.com/is/image/GuessEU/WC0001FMSWC-G5?wid=520&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
@@ -33,7 +36,8 @@
     "id": 4,
     "category": "Phụ kiện",
     "color": "xám",
-    "size": "M"
+    "size": "M",
+    "isBestSeller": false
   },
   {
     "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/AW6308VIS03-SAP?wid=700&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
@@ -42,7 +46,8 @@
     "id": 5,
     "category": "Phụ kiện",
     "color": "vàng",
-    "size": "S"
+    "size": "S",
+    "isBestSeller": true
   },
   {
     "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/M63H24W7JF0-L302-ALTGHOST?wid=1500&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
@@ -51,43 +56,48 @@
     "id": 6,
     "category": "Đồ nam",
     "color": "xanh",
-    "size": "M"
+    "size": "M",
+    "isBestSeller": false
   },
   {
     "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/FLGLO4FAL12-BEIBR?wid=700&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
     "name": "GLORIA HIGH LOGO SNEAKER",
-    "price": 910.000,
+    "price": 910000,
     "id": 7,
     "category": "Giày",
     "color": "trắng",
-    "size": "L"
+    "size": "L",
+    "isBestSeller": true
   },
   {
     "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/HWVG6216060-TAN?wid=700&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
     "name": "CATE RIGID BAG",
-    "price": 940.000,
+    "price": 940000,
     "id": 8,
     "category": "Túi",
     "color": "đen",
-    "size": "S"
+    "size": "S",
+    "isBestSeller": false
   },
   {
     "imgUrl": "http://guesseu.scene7.com/is/image/GuessEU/WC0001FMSWC-G5?wid=520&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
     "name": "GUESS CONNECT WATCH",
-    "price": 438.000,
+    "price": 438000,
     "id": 9,
     "category": "Phụ kiện",
     "color": "xám",
-    "size": "M"
+    "size": "M",
+    "isBestSeller": true
   },
   {
     "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/AW6308VIS03-SAP?wid=700&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
     "name": "'70s RETRO GLAM KEFIAH",
-    "price": 2.000000,
+    "price": 200000,
     "id": 10,
     "category": "Phụ kiện",
     "color": "vàng",
-    "size": "S"
+    "size": "S",
+    "isBestSeller": false
   },
   {
     "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/M63H24W7JF0-L302-ALTGHOST?wid=1500&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
@@ -96,7 +106,8 @@
     "id": 11,
     "category": "Đồ nam",
     "color": "xanh",
-    "size": "M"
+    "size": "M",
+    "isBestSeller": true
   },
   {
     "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/FLGLO4FAL12-BEIBR?wid=700&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
@@ -105,7 +116,8 @@
     "id": 12,
     "category": "Giày",
     "color": "trắng",
-    "size": "L"
+    "size": "L",
+    "isBestSeller": false
   },
   {
     "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/HWVG6216060-TAN?wid=700&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
@@ -114,7 +126,8 @@
     "id": 13,
     "category": "Túi",
     "color": "đen",
-    "size": "S"
+    "size": "S",
+    "isBestSeller": true
   },
   {
     "imgUrl": "http://guesseu.scene7.com/is/image/GuessEU/WC0001FMSWC-G5?wid=520&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
@@ -123,7 +136,8 @@
     "id": 14,
     "category": "Phụ kiện",
     "color": "xám",
-    "size": "M"
+    "size": "M",
+    "isBestSeller": false
   },
   {
     "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/AW6308VIS03-SAP?wid=700&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
@@ -132,6 +146,7 @@
     "id": 15,
     "category": "Phụ kiện",
     "color": "vàng",
-    "size": "S"
+    "size": "S",
+    "isBestSeller": true
   }
 ]

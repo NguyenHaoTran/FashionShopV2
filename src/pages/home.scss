@@ -51,11 +51,11 @@
       position: absolute;
       width: 250px;
       left: 120px;
-      @include respond-to(tablet){
+      @include respond-to(tablet) {
         position: relative;
         width: 300px;
       }
-      @include respond-to(desktop){
+      @include respond-to(desktop) {
         width: 500px;
       }
       img {
@@ -133,9 +133,38 @@
 
   .home_list_products {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
-    margin-bottom: 100px;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 30px;
+  }
+
+  .product-card {
+    width: 200px;
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    transition: 0.5s;
+    &:hover {
+      scale: 110%;
+    }
+
+    img {
+      max-width: 50%;
+      height: auto;
+    }
+
+    h5 {
+      margin: 8px 0;
+      font-size: 10px;
+    }
+
+    p {
+      color: #888;
+      font-size: 14px;
+    }
   }
 }
 
@@ -174,7 +203,7 @@
     align-items: center;
     max-width: 80%;
     border-bottom: solid 0.1px rgb(153, 153, 153);
-    @include respond-to(tablet){
+    @include respond-to(tablet) {
       grid-template-columns: repeat(2, 1fr);
     }
     // @include respond-to(desktop){
@@ -296,7 +325,6 @@
   width: 100%;
   padding: 0;
   margin: 0;
-
 
   .box {
     display: flex;

@@ -1,5 +1,6 @@
 import "./home.scss";
 // import ProductsList from "../products/ProductsList";
+import productsData from "../Data/products.json";
 
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import SquareIcon from "@mui/icons-material/Square";
@@ -12,12 +13,17 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 
 import ScrollReveal from "scrollreveal";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Home = () => {
-  // ScrollReveal
+  
+  const [bestSellingProducts, setBestSellingProducts] = useState([]);
 
   useEffect(() => {
+    // 'isBestSeller'
+    const bestSellers = productsData.filter((product) => product.isBestSeller);
+    setBestSellingProducts(bestSellers);
+    // ScrollReveal
     const sr = ScrollReveal({
       reset: true, // Đảm bảo animation sẽ luôn thực hiện khi cuộn lại
       origin: "top",
@@ -88,7 +94,16 @@ const Home = () => {
             Bộ sưu tập mùa Xuân 2025 đa dạng mẫu mã, mua ngay nhận ưu đã lớn
           </p>
         </div>
-        {/* <div className="home_list_products"><ProductsList products={filteredProducts}/></div> */}
+        <div className="home_list_products">
+          {bestSellingProducts.map((product) => (
+            <div key={product.id} className="product-card">
+              <img src={product.imgUrl} alt={product.name} />
+              <h5>{product.name}</h5>
+              <p>{product.price} VNĐ</p>
+              {/* Thêm nút hoặc thông tin khác nếu cần */}
+            </div>
+          ))}
+        </div>
       </div>
       {/* Home_about */}
       <div className="home_about">
