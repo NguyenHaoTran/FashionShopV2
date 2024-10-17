@@ -1,7 +1,7 @@
 import "./home.scss";
 // import ProductsList from "../products/ProductsList";
 import productsData from "../Data/products.json";
-
+import { useNavigate } from "react-router-dom";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import SquareIcon from "@mui/icons-material/Square";
 import CircleIcon from "@mui/icons-material/Circle";
@@ -16,8 +16,11 @@ import ScrollReveal from "scrollreveal";
 import { useEffect, useState } from "react";
 
 const Home = () => {
-  
   const [bestSellingProducts, setBestSellingProducts] = useState([]);
+  const navigate = useNavigate();
+  const handleSeeMore = () => {
+    navigate("/FashionShopV2/products"); 
+  };
 
   useEffect(() => {
     // 'isBestSeller'
@@ -100,7 +103,7 @@ const Home = () => {
               <img src={product.imgUrl} alt={product.name} />
               <h5>{product.name}</h5>
               <p>{product.price} VNĐ</p>
-              {/* Thêm nút hoặc thông tin khác nếu cần */}
+              <button onClick={handleSeeMore}>Xem thêm</button>
             </div>
           ))}
         </div>
