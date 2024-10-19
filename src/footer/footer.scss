@@ -11,16 +11,19 @@ footer {
   .footer_content {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: column;
     line-height: 2;
 
     .col_1 {
-      width: 100%;
+      width: 70%;
       display: flex;
       align-items: center;
       flex-direction: column;
       text-align: left;
+      @include respond-to(tablet){
+        width: 50%;
+      }
 
       h3 {
         margin: 10px;
@@ -34,16 +37,25 @@ footer {
       }
     }
     .col_23 {
-      width: 100%;
+      width: 60%;
       display: flex;
       justify-content: center;
-      align-items: flex-start;
+      align-items: center;
       padding-bottom: 30px;
+      padding-left: 30px;
+      @include respond-to(tablet)
+      {
+        width: 50%;
+        padding-left: 65px;
+      }
 
       .col_2 {
         text-align: center;
         width: 100%;
         padding: 0 25px 0 25px;
+        ul{
+          text-align: left;
+        }
         p {
           font-size: 20px;
           font-weight: bold;
@@ -54,6 +66,9 @@ footer {
       .col_3 {
         text-align: center;
         width: 100%;
+        ul{
+          text-align: left;
+        }
         p {
           font-size: 20px;
           font-weight: bold;
