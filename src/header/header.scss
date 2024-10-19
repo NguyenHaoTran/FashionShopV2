@@ -4,7 +4,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // background-color: $background-color;
   background-color: rgb(253, 251, 248);
   color: $accent-color;
   position: fixed;
@@ -14,10 +13,22 @@ header {
   box-sizing: border-box;
   transition: transform 0.3s ease-in-out;
   padding: 0 20px 0 20px;
-  //
   margin-top: 50px;
 
-  button {
+  .logo {
+    order: 2;
+    margin: 0 auto;
+    padding-right: 18%;
+    @include respond-to(tablet){
+      order: 0;
+      margin-right: auto;
+      padding-right: 0;
+    }
+  }
+
+  .menu_toggle {
+    order: 1;
+    margin-right: auto;
     border: none;
     background: none;
     font-size: 20px;
@@ -27,10 +38,16 @@ header {
   }
 
   .tools {
-    display: flex;
-    justify-content: space-between;
+    order: 3;
+    display: flex; // Đảm bảo .tools luôn hiển thị
+    justify-content: center;
     align-items: center;
-    z-index: 99998;
+    z-index: 99999;
+    height: 69px;
+    .cart-btn {
+      color: black;
+    }
+
     button {
       background: none;
       border: none;
@@ -39,60 +56,14 @@ header {
       color: black;
 
       &:focus {
-        outline: none; // Loại bỏ đường viền khi focus vào button (tuỳ chọn)
+        outline: none;
       }
     }
   }
-}
-//
-.header.hide {
-  transform: translateY(-70%);
-}
 
-.header.show {
-  transform: translateY(0);
-}
-
-
-// cart
-.cart-popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
-}
-
-.cart-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.cart-content {
-  position: relative;
-  width: 400px;
-  max-width: 90%;
-  background: white;
-  border-radius: 8px;
-  padding: 20px;
-  z-index: 1001;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.close-cart {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 10px;
-  display: block;
-  margin-left: auto;
+  button {
+    border: none;
+    background: none;
+    font-size: 20px;
+  }
 }

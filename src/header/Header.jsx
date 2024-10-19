@@ -49,11 +49,12 @@ const Header = ({ cartItems, updateCartItem, removeCartItem, clearCart }) => {
         </button>
         <div className="tools">
           <button className="cart-btn" onClick={toggleCart}>
-            <i className="ri-shopping-cart-2-line"></i> ({cartItems.length})
+            <i className="ri-shopping-cart-2-line"></i>
+             {/* ({cartItems.length}) */}
           </button>
         </div>
       </header>
-
+    {/* cart popup */}
       {isCartOpen && (
         <div className="cart-popup">
           <div className="cart-overlay" onClick={toggleCart}></div>
