@@ -205,7 +205,7 @@
     max-height: 70%;
     overflow-y: auto;
     @include respond-to(tablet){
-      max-height: 90%;
+      max-height: 60%;
       margin-top: 55px;
     }
 

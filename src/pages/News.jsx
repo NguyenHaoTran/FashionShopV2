@@ -64,7 +64,7 @@ export const News = () => {
               <p>{item.description}</p>
               <div className="end">
                 LOGO
-                <div className="date">{item.Date}</div>
+              <div className="date">{item.Date}</div>
               </div>
             </div>
           ))}
