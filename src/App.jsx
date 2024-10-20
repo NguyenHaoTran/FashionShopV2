@@ -10,6 +10,7 @@ import Contacts from "./pages/Contacts.jsx";
 import Header from "./header/Header.jsx";
 import Footer from "./footer/Footer.jsx";
 import BlackLine from "./header/blackLine/BlackLine.jsx";
+import Account from "./components/LoginSignin/Account.jsx";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -63,6 +64,7 @@ function App() {
         <Route path="/FashionShopV2/products/:id" element={<ProductDetail />} /> {/* Route chi tiết sản phẩm */}
         <Route path="/FashionShopV2/news" element={<News />} />
         <Route path="/FashionShopV2/contacts" element={<Contacts />} />
+        <Route path="/FashionShopV2/account" element={<Account />} /> {/* Route cho LS_In */}
       </Routes>
       <Footer />
     </Router>

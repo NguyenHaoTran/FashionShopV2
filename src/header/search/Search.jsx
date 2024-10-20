@@ -12,7 +12,9 @@ const Search = ({ isVisible, onClose }) => {
 
   useEffect(() => {
     // Fetch dữ liệu từ data.json
-    fetch("https://raw.githubusercontent.com/NguyenHaoTran/FashionShopV2/refs/heads/main/src/Data/products.json")
+    fetch(
+      "https://raw.githubusercontent.com/NguyenHaoTran/FashionShopV2/refs/heads/main/src/Data/products.json"
+    )
       .then((response) => response.json())
       .then((data) => setProducts(data));
   }, []);
@@ -35,6 +37,9 @@ const Search = ({ isVisible, onClose }) => {
   return (
     <div className={`search-modal ${isVisible ? "visible" : "hidden"}`}>
       <div className="modal-content">
+        <button className="close-btn" onClick={onClose}>
+          <CloseIcon />
+        </button>
         <div className="search-box">
           <div className="input">
             <input
@@ -50,17 +55,17 @@ const Search = ({ isVisible, onClose }) => {
               <div
                 key={product.id}
                 className="product-item"
-                onClick={() => handleProductClick(product.id)}
-              >
-                <img src={product.imgUrl} alt={product.name} className="product-image" />
+                onClick={() => handleProductClick(product.id)}>
+                <img
+                  src={product.imgUrl}
+                  alt={product.name}
+                  className="product-image"
+                />
                 {product.name}
               </div>
             ))}
           </div>
         </div>
-        <button className="close-btn" onClick={onClose}>
-          <CloseIcon />
-        </button>
       </div>
     </div>
   );

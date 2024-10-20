@@ -6,7 +6,7 @@ const BlackLine = () => {
   return (
     <div className="container">
       <div className="account">
-        <a href="#">Tài khoản</a>
+        <Link to="/FashionShopV2/account">Tài khoản</Link>
       </div>
       <div className="blackLine_text">
         <p>

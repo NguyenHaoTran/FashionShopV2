@@ -1,10 +1,12 @@
+@import "../../styles/main.scss";
+
 .search-modal {
   position: fixed;
   top: -50px;
   left: 0;
   width: 100%;
   height: calc(100% + 50px);
-  background-color: rgba(0, 0, 0, 0.7);
+  // background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,6 +32,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
+
+    .close-btn {
+      position: absolute; // Sử dụng position absolute
+      top: 10px; // Khoảng cách từ trên
+      right: 10px; // Khoảng cách từ bên phải
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: 20px;
+      color: #333;
+
+      &:hover {
+        color: rgb(86, 73, 57);
+      }
+    }
 
     .search-box {
       width: 100%;
@@ -39,6 +57,7 @@
         align-items: center;
         width: 100%;
         margin-bottom: 16px;
+        padding-top: 40px;
 
         input {
           flex: 1;
@@ -59,42 +78,31 @@
             color: #555;
           }
         }
+      }
 
-        .close-btn {
-          border: none;
-          background: none;
+      .results {
+        .product-item {
+          padding: 8px;
+          background: #ffffff;
+          border-radius: 4px;
+          margin-bottom: 8px;
           cursor: pointer;
-          font-size: 20px;
-          color: #333;
+          text-align: center;
+          display: flex;
+          align-items: center; // căn giữa hình ảnh và tên sản phẩm
+          gap: 8px; // khoảng cách giữa hình ảnh và tên sản phẩm
 
           &:hover {
-            color: rgb(86, 73, 57);
+            background: #e0e0e0;
+          }
+
+          .product-image {
+            width: 50px; // hoặc kích thước bạn mong muốn
+            height: 50px; // hoặc kích thước bạn mong muốn
+            border-radius: 4px; // góc bo tròn
+            object-fit: cover; // giữ tỷ lệ hình ảnh
           }
         }
-      }
-      .results{
-        .product-item {
-            padding: 8px;
-            background: #f5f5f5;
-            border-radius: 4px;
-            margin-bottom: 8px;
-            cursor: pointer;
-            text-align: center;
-            display: flex;
-            align-items: center; // căn giữa hình ảnh và tên sản phẩm
-            gap: 8px; // khoảng cách giữa hình ảnh và tên sản phẩm
-        
-            &:hover {
-              background: #e0e0e0;
-            }
-        
-            .product-image {
-              width: 50px; // hoặc kích thước bạn mong muốn
-              height: 50px; // hoặc kích thước bạn mong muốn
-              border-radius: 4px; // góc bo tròn
-              object-fit: cover; // giữ tỷ lệ hình ảnh
-            }
-          }
       }
     }
   }
