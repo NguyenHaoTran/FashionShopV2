@@ -1,73 +1,109 @@
 .search-modal {
   position: fixed;
-  top: -100px;
+  top: -50px;
   left: 0;
   width: 100%;
-  height: 120%;
-  background-color: rgb(255, 255, 255); // Background with transparency
+  height: calc(100% + 50px);
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translateY(-100%); // Start off-screen
-  transition: transform 0.3s ease-in-out; // Smooth transition
-  z-index: 9999999;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 999999;
 
   &.visible {
-    transform: translateY(0); // Move into view
+    transform: translateY(0);
   }
 
   &.hidden {
-    transform: translateY(-100%); // Move out of view
+    transform: translateY(-100%);
   }
 
   .modal-content {
     background: white;
     border-radius: 8px;
-    padding: 20px;
-    width: 80%;
-    // max-width: 600px;
+    padding: 16px;
+    width: 90%;
+    max-width: 400px;
     position: relative;
-    margin-bottom: 700px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-
-    .close-btn {
-      border: none;
-      background: none;
-      cursor: pointer;
-      font-size: 50px;
-      color: #333;
-      padding-bottom: 10px;
-      &:hover {
-        color: rgb(86, 73, 57);
-      }
-    }
 
     .search-box {
+      width: 100%;
+
       .input {
         display: flex;
         align-items: center;
-        width: 600px;
-      }
-      .export {
-        text-align: center;
-        opacity: 40%;
-      }
+        width: 100%;
+        margin-bottom: 16px;
 
-      input {
-        flex: 1;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        font-size: 16px;
-      }
+        input {
+          flex: 1;
+          padding: 8px;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          font-size: 14px;
+          margin-right: 8px;
+        }
 
-      .search-icon {
-        margin-left: 10px;
-        font-size: 24px;
-        color: #333;
+        .search-icon {
+          font-size: 20px;
+          color: #333;
+          margin-right: 8px;
+          cursor: pointer;
+
+          &:hover {
+            color: #555;
+          }
+        }
+
+        .close-btn {
+          border: none;
+          background: none;
+          cursor: pointer;
+          font-size: 20px;
+          color: #333;
+
+          &:hover {
+            color: rgb(86, 73, 57);
+          }
+        }
       }
+      .results{
+        .product-item {
+            padding: 8px;
+            background: #f5f5f5;
+            border-radius: 4px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            text-align: center;
+            display: flex;
+            align-items: center; // căn giữa hình ảnh và tên sản phẩm
+            gap: 8px; // khoảng cách giữa hình ảnh và tên sản phẩm
+        
+            &:hover {
+              background: #e0e0e0;
+            }
+        
+            .product-image {
+              width: 50px; // hoặc kích thước bạn mong muốn
+              height: 50px; // hoặc kích thước bạn mong muốn
+              border-radius: 4px; // góc bo tròn
+              object-fit: cover; // giữ tỷ lệ hình ảnh
+            }
+          }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .search-modal {
+    .modal-content {
+      max-width: 600px;
     }
   }
 }

@@ -18,7 +18,7 @@ header {
   .logo {
     order: 2;
     margin: 0 auto;
-    padding-right: 18%;
+    padding-right: 10%;
     @include respond-to(tablet){
       order: 0;
       margin-right: auto;
@@ -46,6 +46,10 @@ header {
     height: 69px;
     .cart-btn {
       color: black;
+    }
+    .search-btn{
+      padding-top: 7px;
+      padding-right: 10px;
     }
 
     button {

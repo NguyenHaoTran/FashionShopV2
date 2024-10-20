@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Products from "./pages/Products.jsx";
+import ProductDetail from "./pages/ProductsDetail.jsx"; // Import component chi tiết sản phẩm
 import News from "./pages/News.jsx";
 import Contacts from "./pages/Contacts.jsx";
 import Header from "./header/Header.jsx";
@@ -59,6 +60,7 @@ function App() {
         <Route path="/FashionShopV2/" element={<Home />} />
         <Route path="/FashionShopV2/about" element={<About />} />
         <Route path="/FashionShopV2/products" element={<Products />} />
+        <Route path="/FashionShopV2/products/:id" element={<ProductDetail />} /> {/* Route chi tiết sản phẩm */}
         <Route path="/FashionShopV2/news" element={<News />} />
         <Route path="/FashionShopV2/contacts" element={<Contacts />} />
       </Routes>

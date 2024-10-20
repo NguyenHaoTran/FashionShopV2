@@ -48,6 +48,10 @@ const Header = ({ cartItems, updateCartItem, removeCartItem, clearCart }) => {
           <i className="ri-menu-line"></i>
         </button>
         <div className="tools">
+          <button className="search-btn" onClick={openSearch}>
+            <SearchOutlinedIcon className="search-icon" />
+            <Search />
+          </button>
           <button className="cart-btn" onClick={toggleCart}>
             <i className="ri-shopping-cart-2-line"></i>
              {/* ({cartItems.length}) */}
