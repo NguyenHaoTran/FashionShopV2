@@ -7,7 +7,8 @@
     "category": "Đồ nam",
     "color": "xanh",
     "size": "M",
-    "isBestSeller": true
+    "isBestSeller": true,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac suscipit urna."
   },
   {
     "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/FLGLO4FAL12-BEIBR?wid=700&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
@@ -17,7 +18,8 @@
     "category": "Giày",
     "color": "trắng",
     "size": "L",
-    "isBestSeller": false
+    "isBestSeller": false,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget est libero."
   },
   {
     "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/HWVG6216060-TAN?wid=700&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
@@ -27,7 +29,8 @@
     "category": "Túi",
     "color": "đen",
     "size": "S",
-    "isBestSeller": true
+    "isBestSeller": true,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum turpis."
   },
   {
     "imgUrl": "http://guesseu.scene7.com/is/image/GuessEU/WC0001FMSWC-G5?wid=520&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
@@ -37,7 +40,8 @@
     "category": "Phụ kiện",
     "color": "xám",
     "size": "M",
-    "isBestSeller": false
+    "isBestSeller": false,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed elit eget justo."
   },
   {
     "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/AW6308VIS03-SAP?wid=700&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
@@ -47,7 +51,8 @@
     "category": "Phụ kiện",
     "color": "vàng",
     "size": "S",
-    "isBestSeller": true
+    "isBestSeller": true,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam suscipit urna sit amet."
   },
   {
     "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/M63H24W7JF0-L302-ALTGHOST?wid=1500&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
@@ -57,7 +62,8 @@
     "category": "Đồ nam",
     "color": "xanh",
     "size": "M",
-    "isBestSeller": false
+    "isBestSeller": false,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et mi quis libero."
   },
   {
     "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/FLGLO4FAL12-BEIBR?wid=700&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
@@ -67,7 +73,8 @@
     "category": "Giày",
     "color": "trắng",
     "size": "L",
-    "isBestSeller": true
+    "isBestSeller": true,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at elit justo."
   },
   {
     "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/HWVG6216060-TAN?wid=700&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
@@ -77,7 +84,8 @@
     "category": "Túi",
     "color": "đen",
     "size": "S",
-    "isBestSeller": false
+    "isBestSeller": false,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac suscipit felis."
   },
   {
     "imgUrl": "http://guesseu.scene7.com/is/image/GuessEU/WC0001FMSWC-G5?wid=520&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
@@ -87,7 +95,8 @@
     "category": "Phụ kiện",
     "color": "xám",
     "size": "M",
-    "isBestSeller": true
+    "isBestSeller": true,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec augue ut risus."
   },
   {
     "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/AW6308VIS03-SAP?wid=700&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
@@ -97,7 +106,8 @@
     "category": "Phụ kiện",
     "color": "vàng",
     "size": "S",
-    "isBestSeller": false
+    "isBestSeller": false,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu ante gravida."
   },
   {
     "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/M63H24W7JF0-L302-ALTGHOST?wid=1500&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
@@ -107,7 +117,8 @@
     "category": "Đồ nam",
     "color": "xanh",
     "size": "M",
-    "isBestSeller": true
+    "isBestSeller": true,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum orci eget."
   },
   {
     "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/FLGLO4FAL12-BEIBR?wid=700&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
@@ -117,7 +128,8 @@
     "category": "Giày",
     "color": "trắng",
     "size": "L",
-    "isBestSeller": false
+    "isBestSeller": false,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam vel nisl lacinia."
   },
   {
     "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/HWVG6216060-TAN?wid=700&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
@@ -127,26 +139,7 @@
     "category": "Túi",
     "color": "đen",
     "size": "S",
-    "isBestSeller": true
-  },
-  {
-    "imgUrl": "http://guesseu.scene7.com/is/image/GuessEU/WC0001FMSWC-G5?wid=520&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
-    "name": "GUESS CONNECT WATCH",
-    "price": 438000,
-    "id": 14,
-    "category": "Phụ kiện",
-    "color": "xám",
-    "size": "M",
-    "isBestSeller": false
-  },
-  {
-    "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/AW6308VIS03-SAP?wid=700&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
-    "name": "'70s RETRO GLAM KEFIAH",
-    "price": 200000,
-    "id": 15,
-    "category": "Phụ kiện",
-    "color": "vàng",
-    "size": "S",
-    "isBestSeller": true
+    "isBestSeller": true,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sapien id mi."
   }
 ]

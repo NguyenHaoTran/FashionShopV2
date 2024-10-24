@@ -92,6 +92,7 @@ const Products = () => {
             addToCart={addToCart}
           />
         </div>
+        {/* cart */}
         <button className="cart-button" onClick={toggleCart}>
           Mở Giỏ Hàng
         </button>
@@ -106,23 +107,7 @@ const Products = () => {
             </div>
           </div>
         )}
-        {selectedProduct && (
-          <div
-            className="modal-overlay"
-            onClick={() => setSelectedProduct(null)}
-          >
-            <div
-              className="modal-content"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <ProductsDetail
-                product={selectedProduct}
-                onClose={() => setSelectedProduct(null)}
-                addToCart={addToCart}
-              />
-            </div>
-          </div>
-        )}
+        {/* popup cũ detail */}
       </div>
     </>
   );

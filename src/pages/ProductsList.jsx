@@ -1,11 +1,17 @@
-// import React from 'react';
+import { useNavigate } from "react-router-dom";
 import "./productsList.scss";
 
-const ProductsList = ({ products = [], onProductClick, addToCart }) => {
+const ProductsList = ({ products = [], addToCart }) => {
+  const navigate = useNavigate();
+
+  const handleProductClick = (productId) => {
+    // Điều hướng đến trang chi tiết sản phẩm dựa trên id
+    navigate(`/FashionShopV2/products/${productId}`);
+  };
+
   return (
     <div className="products-list">
       {products.map((product) => (
-        // card
         <div key={product.id} className="container_card">
           <div className="card">
             <div className="imgBx">
@@ -30,7 +36,8 @@ const ProductsList = ({ products = [], onProductClick, addToCart }) => {
                 <p>{product.price} VNĐ</p>
               </div>
               <div className="btn">
-                <button onClick={() => onProductClick(product)}>
+                {/* Chuyển đến trang chi tiết sản phẩm */}
+                <button onClick={() => handleProductClick(product.id)}>
                   Chi tiết
                 </button>
                 <button onClick={() => addToCart(product)}>Thêm vào giỏ</button>
