@@ -19,7 +19,7 @@ const ProductsDetail = () => {
         </div>
         <div className="des">
           <b>Giá: {product.price} VNĐ</b>
-          <p>Mô tả: {product.description}</p>
+          <p>{product.description}</p>
         </div>
         <div className="productDetail_btn">
           <button>Thêm vào giỏ hàng</button>
