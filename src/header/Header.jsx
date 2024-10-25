@@ -6,6 +6,14 @@ import Search from "../header/search/Search.jsx";
 import { CartContext } from "../components/cart/CartContext.jsx"; // Import CartContext để sử dụng
 
 const Header = () => {
+  // Tính giá trị giỏ hàng
+  const calculateTotal = () => {
+    return cartItems.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0
+    );
+  };
+
   const { cartItems, updateQuantity, removeFromCart, clearCart } =
     useContext(CartContext); // Lấy dữ liệu và hàm từ CartContext
   const [isOpen, setIsOpen] = useState(false);
@@ -104,7 +112,12 @@ const Header = () => {
                 </div>
               ))
             )}
-            <button onClick={clearCart}>Xóa toàn bộ giỏ hàng</button>
+            <div className="cart-total">
+              <strong>Tổng tiền: {calculateTotal()} VNĐ</strong>{" "}
+              {/* Hiển thị tổng tiền */}
+            </div>
+            <button className="deleteItemBtn">Thanh toán</button>
+            <button className="deleteItemBtn" onClick={clearCart}>Xóa toàn bộ giỏ hàng</button>
             <button className="close-cart" onClick={toggleCart}>
               Đóng Giỏ Hàng
             </button>

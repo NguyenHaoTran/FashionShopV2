@@ -1,8 +1,10 @@
 import { useParams } from "react-router-dom";
 import productsData from "../Data/products.json";
 import "./productsDetail.scss";
+import useCart from "../components/cart/useCart";
 
 const ProductsDetail = () => {
+  const { addToCart } = useCart();
   const { id } = useParams(); // Lấy id từ URL
   const product = productsData.find((p) => p.id === parseInt(id)); // Tìm sản phẩm dựa trên id
 
@@ -22,7 +24,7 @@ const ProductsDetail = () => {
           <p>{product.description}</p>
         </div>
         <div className="productDetail_btn">
-          <button>Thêm vào giỏ hàng</button>
+          <button onClick={() => addToCart(product)}>Thêm vào giỏ hàng</button>
         </div>
       </div>
 

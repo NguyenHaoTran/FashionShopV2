@@ -5,6 +5,7 @@ import { CartContext } from "../components/cart/CartContext"; // Sử dụng Car
 import productsData from "../Data/products.json";
 import "./products.scss";
 
+
 const Products = () => {
   const { addToCart } = useContext(CartContext); // Lấy hàm addToCart từ context
   const [filteredProducts, setFilteredProducts] = useState(productsData);

@@ -19,7 +19,7 @@ header {
     order: 2;
     margin: 0 auto;
     padding-right: 10%;
-    @include respond-to(tablet){
+    @include respond-to(tablet) {
       order: 0;
       margin-right: auto;
       padding-right: 0;
@@ -47,7 +47,7 @@ header {
     .cart-btn {
       color: black;
     }
-    .search-btn{
+    .search-btn {
       padding-top: 7px;
       padding-right: 10px;
     }
@@ -72,7 +72,6 @@ header {
   }
 }
 
-
 // hide, show header
 .header.hide {
   transform: translateY(-73%);
@@ -82,108 +81,122 @@ header {
   transform: translateY(0);
 }
 
-
 .cart-popup {
-  position: fixed; // Để giữ nguyên vị trí khi cuộn trang
-  right: -300px; // Bắt đầu ở bên ngoài màn hình
-  top: 200px;
-  width: 300px;
+  position: fixed;
+  right: -300px;
+  top: 130px;
+  width: 400px;
   height: 70%;
   border-radius: 10px;
-  background-color: $background-color; // Sử dụng màu nền đã định nghĩa
-  border: 1px solid $tertiary-color; // Sử dụng màu viền đã định nghĩa
+  background-color: $background-color;
+  border: 1px solid $tertiary-color;
   padding: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); // Hiệu ứng bóng nhẹ
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   z-index: 99999999;
-  transition: right 0.3s ease-in-out; // Hiệu ứng trượt
+  transition: right 0.3s ease-in-out;
 
   // Khi hiển thị popup
   &.show {
-    right: 0; // Đưa popup vào bên trong màn hình
+    right: 0;
   }
 
   // Nội dung giỏ hàng
   .cart-content {
     display: flex;
-    flex-direction: column; // Đặt các mục theo chiều dọc
-    height: 100%; // Đảm bảo chiều cao tối đa
-    overflow-y: auto; // Thêm thanh cuộn nếu cần
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+    justify-content: center;
+    align-items: center;
 
     // Thông báo khi giỏ hàng trống
     p {
       text-align: center;
       font-weight: bold;
-      color: $accent-color; // Sử dụng màu nhấn
-      margin: 20px 0; // Khoảng cách trên và dưới
+      color: $accent-color;
+      margin: 20px 0;
     }
 
     // Danh sách sản phẩm
     .cart-items {
-      display: flex; // Sử dụng flexbox để căn chỉnh
-      align-items: center; // Căn giữa theo chiều dọc
-      margin-bottom: 10px; // Khoảng cách giữa các sản phẩm
-      padding: 10px; // Thêm padding cho mỗi mục
-      background-color: white; // Sử dụng màu phụ cho nền sản phẩm
-      border-radius: 5px; // Bo góc cho sản phẩm
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: white;
+      border-radius: 5px;
+      width: 100%;
 
       img {
-        width: 50px; // Chiều rộng cố định cho ảnh
-        height: auto; // Tự động điều chỉnh chiều cao
-        border-radius: 5px; // Bo góc cho ảnh
-        margin-right: 10px; // Khoảng cách giữa ảnh và nội dung
+        width: 50px;
+        height: auto;
+        border-radius: 5px;
+        margin-right: 10px;
       }
 
       .cart-item-details {
         flex: 1; // Cho phép nội dung chiếm phần còn lại
 
         .cart-item-actions {
-          margin-top: 5px; // Khoảng cách trên giữa thông tin và các nút
+          margin-top: 5px;
+          text-align: right;
 
           button {
-            margin-right: 5px; // Khoảng cách giữa các nút
-            background-color: $primary-color; // Nút có màu chính
-            color: white; // Màu chữ trắng
-            border: none; // Không có viền
-            padding: 5px 10px; // Padding cho nút
-            cursor: pointer; // Con trỏ tay khi hover
+            margin-right: 5px;
+            background-color: $primary-color;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
 
             &:hover {
-              background-color: darken($primary-color, 10%); // Hiệu ứng tối màu khi hover
+              background-color: darken($primary-color, 10%);
             }
           }
         }
       }
     }
 
+    .cart-total {
+      margin-top: 10px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #dc3e37; // Màu sắc cho tổng tiền
+    }
+
     // Nút xóa giỏ hàng
-    button.clear-cart {
-      background-color: $accent-color; // Màu nhấn cho nút xóa
+    button.clear-cart, .deleteItemBtn{
+      background-color: $accent-color;
       color: white;
       border: none;
       padding: 10px;
       cursor: pointer;
       border-radius: 5px;
-      margin-top: 20px; // Khoảng cách trên
-      transition: background-color 0.3s; // Hiệu ứng chuyển màu
+      margin-top: 20px;
+      transition: background-color 0.3s;
+      height: 50px;
+      width: 60%;
 
       &:hover {
-        background-color: darken($accent-color, 10%); // Hiệu ứng tối màu khi hover
+        background-color: darken($accent-color, 10%);
       }
     }
 
     // Nút đóng giỏ hàng
     button.close-cart {
-      background-color: $primary-color; // Màu chính cho nút đóng
+      background-color: $primary-color;
       color: white;
       border: none;
       padding: 10px;
       cursor: pointer;
       border-radius: 5px;
-      margin-top: 10px; // Khoảng cách trên
-      transition: background-color 0.3s; // Hiệu ứng chuyển màu
+      margin-top: 10px;
+      transition: background-color 0.3s;
+      width: 60%;
 
       &:hover {
-        background-color: darken($primary-color, 10%); // Hiệu ứng tối màu khi hover
+        background-color: darken($primary-color, 10%);
       }
     }
   }
@@ -200,15 +213,15 @@ header {
 
       button {
         margin-left: 10px;
-        background-color: $primary-color; // Sử dụng màu chính
+        background-color: $primary-color;
         color: white;
         border: none;
-        padding: 5px 10px; // Thêm padding cho nút
-        border-radius: 5px; // Bo góc cho nút
-        cursor: pointer; // Con trỏ tay khi hover
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
 
         &:hover {
-          background-color: darken($primary-color, 10%); // Hiệu ứng tối màu khi hover
+          background-color: darken($primary-color, 10%);
         }
       }
     }
@@ -216,21 +229,21 @@ header {
 }
 
 .cart-btn {
-  position: relative; // Để đặt vòng tròn số lượng trong vị trí chính xác
+  position: relative;
 
   .cart-count {
     position: absolute;
-    top: -5px; // Điều chỉnh vị trí của số lượng
-    right: -10px; // Điều chỉnh vị trí của số lượng
-    background-color: $secondary-color; // Màu nền đỏ
-    color: black; // Màu chữ đen
-    border-radius: 50%; // Tạo hình tròn
-    width: 15px; // Đặt chiều rộng
-    height: 15px; // Đặt chiều cao
-    display: flex; // Sử dụng flexbox để căn giữa chữ
-    justify-content: center; // Căn giữa
-    align-items: center; // Căn giữa
-    font-size: 10px; // Kích thước chữ nhỏ hơn
-    font-weight: bold; // Làm đậm chữ
+    top: -5px;
+    right: -10px;
+    background-color: $secondary-color;
+    color: black;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    font-weight: bold;
   }
 }
