@@ -6,7 +6,8 @@ import Search from "../header/search/Search.jsx";
 import { CartContext } from "../components/cart/CartContext.jsx"; // Import CartContext để sử dụng
 
 const Header = () => {
-  const { cartItems, updateQuantity, removeFromCart, clearCart } = useContext(CartContext); // Lấy dữ liệu và hàm từ CartContext
+  const { cartItems, updateQuantity, removeFromCart, clearCart } =
+    useContext(CartContext); // Lấy dữ liệu và hàm từ CartContext
   const [isOpen, setIsOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false); // State để mở/đóng giỏ hàng
   const [showHeader, setShowHeader] = useState(true);
@@ -54,25 +55,52 @@ const Header = () => {
           </button>
           <button className="cart-btn" onClick={toggleCart}>
             <i className="ri-shopping-cart-2-line"></i>
-            ({cartItems.length}) {/* Hiển thị số lượng sản phẩm trong giỏ */}
+            {cartItems.length > 0 && (
+              <span className="cart-count">{cartItems.length}</span>
+            )}
           </button>
         </div>
       </header>
 
       {/* cart popup */}
+      {/* cart popup */}
       {isCartOpen && (
-        <div className={`cart-popup ${isCartOpen ? 'show' : ''}`}>
+        <div className={`cart-popup ${isCartOpen ? "show" : ""}`}>
           <div className="cart-overlay" onClick={toggleCart}></div>
           <div className="cart-content">
             {cartItems.length === 0 ? (
               <p>Giỏ hàng trống</p>
             ) : (
               cartItems.map((item) => (
-                <div key={item.id}>
-                  <p>{item.name} - Số lượng: {item.quantity}</p>
-                  <button onClick={() => removeFromCart(item.id)}>Xóa</button>
-                  <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
-                  <button onClick={() => updateQuantity(item.id, item.quantity - 1)}>-</button>
+                <div key={item.id} className="cart-items">
+                  {/* Hiển thị ảnh sản phẩm */}
+                  <img
+                    src={item.imgUrl}
+                    alt={item.name}
+                    className="cart-item-image"
+                  />
+                  <div className="cart-item-details">
+                    <p>
+                      {item.name} - Số lượng: {item.quantity}
+                    </p>
+                    <div className="cart-item-actions">
+                      <button onClick={() => removeFromCart(item.id)}>
+                        Xóa
+                      </button>
+                      <button
+                        onClick={() =>
+                          updateQuantity(item.id, item.quantity + 1)
+                        }>
+                        +
+                      </button>
+                      <button
+                        onClick={() =>
+                          updateQuantity(item.id, item.quantity - 1)
+                        }>
+                        -
+                      </button>
+                    </div>
+                  </div>
                 </div>
               ))
             )}
