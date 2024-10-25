@@ -34,7 +34,7 @@ const Products = () => {
   }, []);
 
   return (
-    <>
+    <div className="products">
       <div className="banner">
         <div className="selection">
           <a href="/">TRANG CHỦ</a>
@@ -43,7 +43,7 @@ const Products = () => {
         </div>
         <p className="p_banner">SẢN PHẨM</p>
       </div>
-      <section className="products-section">
+      <div className="products-section">
         <div className="container">
           <div className="filterBar">
             <FilterBar onFilter={handleFilter} />
@@ -52,8 +52,8 @@ const Products = () => {
             <ProductsList products={filteredProducts} addToCart={addToCart} />
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </div>
   );
 };
 

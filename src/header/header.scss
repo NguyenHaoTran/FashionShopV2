@@ -84,15 +84,23 @@ header {
 
 
 .cart-popup {
-  position: absolute;
-  right: 0;
-  top: 100%;
+  position: fixed; // Để giữ nguyên vị trí khi cuộn trang
+  right: -300px; // Bắt đầu ở bên ngoài màn hình
+  top: 200px;
   width: 300px;
+  height: 70%; 
+  border-radius: 10px;
   background-color: white;
   border: 1px solid #ccc;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   z-index: 99999999;
+  transition: right 0.3s ease-in-out; // Hiệu ứng trượt
+
+  // Khi hiển thị popup
+  &.show {
+    right: 0; // Đưa popup vào bên trong màn hình
+  }
 
   ul {
     list-style: none;
