@@ -5,7 +5,6 @@ const ProductsList = ({ products = [], addToCart }) => {
   const navigate = useNavigate();
 
   const handleProductClick = (productId) => {
-    // Điều hướng đến trang chi tiết sản phẩm dựa trên id
     navigate(`/FashionShopV2/products/${productId}`);
   };
 
@@ -36,10 +35,7 @@ const ProductsList = ({ products = [], addToCart }) => {
                 <p>{product.price} VNĐ</p>
               </div>
               <div className="btn">
-                {/* Chuyển đến trang chi tiết sản phẩm */}
-                <button onClick={() => handleProductClick(product.id)}>
-                  Chi tiết
-                </button>
+                <button onClick={() => handleProductClick(product.id)}>Chi tiết</button>
                 <button onClick={() => addToCart(product)}>Thêm vào giỏ</button>
               </div>
             </div>

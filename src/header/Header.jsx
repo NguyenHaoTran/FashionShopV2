@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Nav from "./nav/Nav.jsx";
 import "./header.scss";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import Search from "../header/search/Search.jsx";
-import Cart from "../components/cart/Cart.jsx"; // Import component Cart
+import { CartContext } from "../components/cart/CartContext.jsx"; // Import CartContext để sử dụng
 
-const Header = ({ cartItems, updateCartItem, removeCartItem, clearCart }) => {
+const Header = () => {
+  const { cartItems, updateQuantity, removeFromCart, clearCart } = useContext(CartContext); // Lấy dữ liệu và hàm từ CartContext
   const [isOpen, setIsOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false); // State để mở/đóng giỏ hàng
   const [showHeader, setShowHeader] = useState(true);
@@ -54,21 +55,29 @@ const Header = ({ cartItems, updateCartItem, removeCartItem, clearCart }) => {
           </button>
           <button className="cart-btn" onClick={toggleCart}>
             <i className="ri-shopping-cart-2-line"></i>
-             {/* ({cartItems.length}) */}
+            ({cartItems.length}) {/* Hiển thị số lượng sản phẩm trong giỏ */}
           </button>
         </div>
       </header>
-    {/* cart popup */}
+
+      {/* cart popup */}
       {isCartOpen && (
         <div className="cart-popup">
           <div className="cart-overlay" onClick={toggleCart}></div>
           <div className="cart-content">
-            <Cart
-              cartItems={cartItems}
-              updateCartItem={updateCartItem}
-              removeCartItem={removeCartItem}
-              clearCart={clearCart}
-            />
+            {cartItems.length === 0 ? (
+              <p>Giỏ hàng trống</p>
+            ) : (
+              cartItems.map((item) => (
+                <div key={item.id}>
+                  <p>{item.name} - Số lượng: {item.quantity}</p>
+                  <button onClick={() => removeFromCart(item.id)}>Xóa</button>
+                  <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
+                  <button onClick={() => updateQuantity(item.id, item.quantity - 1)}>-</button>
+                </div>
+              ))
+            )}
+            <button onClick={clearCart}>Xóa toàn bộ giỏ hàng</button>
             <button className="close-cart" onClick={toggleCart}>
               Đóng Giỏ Hàng
             </button>

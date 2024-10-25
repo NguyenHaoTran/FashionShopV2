@@ -81,3 +81,36 @@ header {
 .header.show {
   transform: translateY(0);
 }
+
+
+.cart-popup {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 300px;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 99999999;
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+
+      button {
+        margin-left: 10px;
+        background-color: #dc3e37;
+        color: white;
+        border: none;
+        padding: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+}
