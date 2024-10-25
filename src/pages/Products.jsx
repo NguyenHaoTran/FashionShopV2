@@ -43,8 +43,9 @@ const Products = () => {
         </div>
         <p className="p_banner">SẢN PHẨM</p>
       </div>
+      {/*  */}
       <div className="products-section">
-        <div className="container">
+        <div className="products-container">
           <div className="filterBar">
             <FilterBar onFilter={handleFilter} />
           </div>

@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: rgb(245, 245, 245);
   .banner {
     background-color: rgb(233, 233, 233);
     padding: 120px 0px 120px 0px;
@@ -34,12 +35,16 @@
     align-items: center;
     flex-direction: column;
     height: 100%;
+    padding-top: 30px;
 
-    .container {
+    .products-container {
       display: flex;
       flex-direction: column;
 
       .filterBar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       .listProduct {
