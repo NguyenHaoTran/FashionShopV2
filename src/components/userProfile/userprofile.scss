@@ -1,19 +1,41 @@
 @import "../../styles/main.scss";
 
 .user-profile {
-    padding-top: 250px;
-    padding-bottom: 150px;
+  padding-top: 250px;
+  padding-bottom: 150px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  @include respond-to(tablet){
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
   .data {
-    max-width: 600px;
-    margin: 20px auto;
+    width: 400px;
+    margin: 20px;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #fff;
 
+    .avt{
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 100px; 
+            border-radius: 50%;
+            border: 3px solid $secondary-color;
+        }
+    }
+
     h2 {
       text-align: center;
-      color: #dc3e37; // Màu tiêu đề
+      color: #dc3e37;
+      font-size: 20px;
     }
 
     .form-group {
@@ -58,6 +80,39 @@
         &:disabled {
           background-color: #ccc; // Màu nền cho nút disabled
           cursor: not-allowed;
+        }
+      }
+    }
+  }
+  .orders-data {
+    .orders {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+
+      .order {
+        margin-bottom: 15px;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+
+        h3 {
+          color: #dc3e37; // Màu tiêu đề đơn hàng
+          font-size: 20px;
+        }
+
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+
+          li {
+            padding: 5px 0;
+          }
+        }
+
+        p {
+          margin: 5px 0;
         }
       }
     }
