@@ -1,0 +1,61 @@
+@import "../../styles/main.scss";
+
+.user-profile {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+
+    h2 {
+        text-align: center;
+        color: #dc3e37; // Màu tiêu đề
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #322a2a; // Màu văn bản
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+
+            &:disabled {
+                background-color: #f0f0f0; // Màu nền cho input disabled
+            }
+        }
+    }
+
+    .form-actions {
+        text-align: center;
+
+        button {
+            margin: 0 10px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            background-color: #dc3e37; // Màu nền cho nút
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #f2965b; // Màu nền khi hover
+            }
+
+            &:disabled {
+                background-color: #ccc; // Màu nền cho nút disabled
+                cursor: not-allowed;
+            }
+        }
+    }
+}

@@ -10,6 +10,7 @@ import Header from "./header/Header.jsx";
 import Footer from "./footer/Footer.jsx";
 import BlackLine from "./header/blackLine/BlackLine.jsx";
 import Account from "./components/LoginSignin/Account.jsx";
+import UserProfile from "./components/userProfile/UserProfile.jsx";
 import { CartProvider } from "./components/cart/CartContext.jsx";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="/FashionShopV2/news" element={<News />} />
           <Route path="/FashionShopV2/contacts" element={<Contacts />} />
           <Route path="/FashionShopV2/account" element={<Account />} /> {/* Route cho LS_In */}
+          <Route path="/FashionShopV2/userprofile" element={<UserProfile />} /> {/* Route cho LS_In */}
         </Routes>
         <Footer />
       </Router>

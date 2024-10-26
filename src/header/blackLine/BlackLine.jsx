@@ -6,6 +6,13 @@ const BlackLine = () => {
   return (
     <div className="container">
       <div className="account">
+        {/*  */}
+        <Link to="/FashionShopV2/userprofile">   
+            <img
+              src="https://raw.githubusercontent.com/NguyenHaoTran/FashionShopV2/main/public/avt.jpg"
+              alt="Avatar"
+            />       
+        </Link>
         <Link to="/FashionShopV2/account">Tài khoản</Link>
       </div>
       <div className="blackLine_text">
