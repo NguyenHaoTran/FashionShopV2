@@ -145,7 +145,7 @@ export const News = () => {
               &times;
             </button> */}
             {selectedItem && (
-              <div>
+              <div className="popup-content-item">
                 <h2>{selectedItem.name}</h2>
                 <img src={selectedItem.imgUrl} alt={selectedItem.name} />
                 <p>{selectedItem.content}</p>

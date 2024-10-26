@@ -18,7 +18,7 @@
 
     .p_banner {
       margin-top: 30px;
-      font-size: 50px;
+      font-size: 40px;
     }
 
     .selection {
@@ -44,7 +44,7 @@
       height: 100%;
     }
     @include respond-to(desktop) {
-        max-width: 60%;
+      max-width: 60%;
     }
 
     .contents {
@@ -97,7 +97,7 @@
     .sideBar {
       width: 100%;
       margin-top: 50px;
-      @include respond-to(tablet){
+      @include respond-to(tablet) {
         width: 70%;
         position: sticky;
         top: 10px;
@@ -113,7 +113,6 @@
         h3 {
           font-size: 30px;
           margin-bottom: 10px;
-          
         }
 
         .filterButtons {
@@ -204,20 +203,34 @@
     width: 90%;
     max-height: 70%;
     overflow-y: auto;
-    @include respond-to(tablet){
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    @include respond-to(tablet) {
       max-height: 75%;
       margin-top: 55px;
     }
 
-    img {
-      width: 100%;
-      border-radius: 15px;
-    }
+    .popup-content-item {
+      max-width: 100%;
+      h2{
+        text-align: center;
+      }
+      img {
+        padding-top: 50px;
+        width: 100%;
+        border-radius: 5px;
+      }
 
-    p {
-      font-size: 20px;
-      line-height: 1.5;
-      padding: 30px;
+      p {
+        font-size: 20px;
+        line-height: 1.5;
+        padding: 30px;
+      }
+      @include respond-to(tablet){
+        max-width: 70%;
+      }
     }
   }
 
