@@ -31,7 +31,8 @@ const Search = ({ isVisible, onClose }) => {
   }, [searchTerm, products]);
 
   const handleProductClick = (id) => {
-    navigate(`/products/${id}`);
+    navigate(`/FashionShopV2/products/${id}`);
+    onClose();
   };
 
   return (

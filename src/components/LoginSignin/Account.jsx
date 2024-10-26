@@ -58,6 +58,11 @@ const LS_In = () => {
         <p className="toggle-link" onClick={() => setIsLogin(!isLogin)}>
           {isLogin ? 'Chưa có tài khoản? Đăng ký' : 'Đã có tài khoản? Đăng nhập'}
         </p>
+        {/* icon */}
+        <div className='icons'>
+          <i class="ri-facebook-circle-fill"></i>
+          <i class="ri-google-fill"></i>
+        </div>
         {message && <div className="message">{message}</div>}
       </div>
     </div>

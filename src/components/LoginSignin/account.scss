@@ -9,19 +9,20 @@
 }
 
 .form-container {
-    background-color: $tertiary-color;
+    background-color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    width: 500px;
 
     .title {
-        color: $primary-color;
+        color: $secondary-color;
         margin-bottom: 20px;
     }
 
     input {
-        width: 100%;
+        width: 70%;
         padding: 10px;
         margin-bottom: 10px;
         border: 1px solid #ccc;
@@ -33,7 +34,8 @@
     }
 
     .submit-btn {
-        width: 100%;
+        margin-top: 30px;
+        width: 200px;
         padding: 10px;
         background-color: $primary-color;
         color: $text-color;
@@ -47,12 +49,20 @@
     }
 
     .toggle-link {
-        margin-top: 10px;
-        color: $link-color;
+        margin-top: 20px;
+        color: $accent-color;
         cursor: pointer;
 
         &:hover {
             text-decoration: underline;
+        }
+    }
+
+    .icons{
+        padding-top: 20px;
+        color: $secondary-color;
+        i{
+            padding: 5px;
         }
     }
 

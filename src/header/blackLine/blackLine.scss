@@ -13,23 +13,21 @@
   font-size: 10px;
   font-weight: 600;
   .blackLine_text{
-    padding-right: 8%;
+    display: none;
     a{
       color: white;
       text-decoration: underline;
     }
     @include respond-to(tablet){
-      padding-right: 0;
+      display: block;
     }
   }
   .language {
-    display: none;
+    display: block;
     justify-content: center;
     align-items: center;
     gap: 5px;
-    @include respond-to(tablet) {
-      display: block;
-    }
+    margin-left: 20%;
     .items {
       display: flex;
       flex-direction: column;
@@ -65,13 +63,14 @@
         color: black;
       }
     }
+    @include respond-to(tablet){
+      margin-left: 0;
+    }
   }
   .account a {
     color: white;
-    display: none;
-    @include respond-to(tablet){
-      display: block;
-    }
+    display: block;
+    
   }
   
 }
