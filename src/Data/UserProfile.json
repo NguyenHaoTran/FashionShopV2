@@ -1,5 +1,38 @@
 {
   "name": "Nguyen Van A",
   "email": "nguyenvana@example.com",
-  "phone": "123456789"
+  "phone": "123456789",
+  "avatar": "https://raw.githubusercontent.com/NguyenHaoTran/FashionShopV2/main/public/avt.jpg",
+  "address": "114 Bình Hưng Hòa, Bình Tân, TPHCM",
+  "orders": [
+    {
+      "orderId": "001",
+      "items": [
+        {
+          "product": "Áo Thun",
+          "quantity": 2,
+          "price": 200000
+        },
+        {
+          "product": "Quần Jeans",
+          "quantity": 1,
+          "price": 500000
+        }
+      ],
+      "paymentStatus": "Đã thanh toán",
+      "deliveryStatus": "Đang giao"
+    },
+    {
+      "orderId": "002",
+      "items": [
+        {
+          "product": "Giày Sneaker",
+          "quantity": 1,
+          "price": 800000
+        }
+      ],
+      "paymentStatus": "Chưa thanh toán",
+      "deliveryStatus": "Chưa giao"
+    }
+  ]
 }

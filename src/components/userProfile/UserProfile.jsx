@@ -12,7 +12,7 @@ const UserProfile = () => {
 
   useEffect(() => {
     // Fetch dữ liệu người dùng từ file JSON
-    fetch('https://raw.githubusercontent.com/NguyenHaoTran/JSON_Files/main/UserProfile.json')
+    fetch('https://raw.githubusercontent.com/NguyenHaoTran/FashionShopV2/refs/heads/main/src/Data/UserProfile.json')
       .then((response) => response.json())
       .then((data) => {
         setUserData(data);
@@ -50,7 +50,8 @@ const UserProfile = () => {
   }
 
   return (
-    <div className="user-profile">
+    <div className='user-profile'>
+<div className="data">
       <h2>Thông Tin Người Dùng</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
@@ -101,6 +102,8 @@ const UserProfile = () => {
         </div>
       </form>
     </div>
+    </div>
+    
   );
 };
 
