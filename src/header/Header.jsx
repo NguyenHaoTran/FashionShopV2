@@ -75,11 +75,19 @@ const Header = () => {
         <div className={`cart-popup ${isCartOpen ? "show" : ""}`}>
           <div className="cart-overlay" onClick={toggleCart}></div>
           <div className="cart-content">
+            <div className="close-delete_btns">
+              {/* <button className="deleteItemBtn" onClick={clearCart}>
+                Xóa toàn bộ giỏ hàng
+              </button> */}
+              <button className="close-cart" onClick={toggleCart}>
+                X
+              </button>
+            </div>
             {cartItems.length === 0 ? (
               <p>Giỏ hàng trống</p>
             ) : (
               cartItems.map((item) => (
-                <div key={item.id} className="cart-items">
+                <div key={item.id} className="cart-items"> 
                   {/* Hiển thị ảnh sản phẩm */}
                   <img
                     src={item.imgUrl}
@@ -115,13 +123,9 @@ const Header = () => {
               {/* Hiển thị tổng tiền */}
             </div>
             <button className="deleteItemBtn">Thanh toán</button>
-            <button className="deleteItemBtn" onClick={clearCart}>
-              Xóa toàn bộ giỏ hàng
-            </button>
-            <button className="close-cart" onClick={toggleCart}>
-              Đóng Giỏ Hàng
-            </button>
+            
           </div>
+          {/*  */}
         </div>
       )}
 

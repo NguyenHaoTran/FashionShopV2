@@ -6,7 +6,8 @@
   left: 0;
   width: 100%;
   height: calc(100% + 0px);
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
   display: flex;
   justify-content: center;
   align-items: flex-start;
