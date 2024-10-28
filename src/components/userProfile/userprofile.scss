@@ -7,7 +7,7 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  @include respond-to(tablet){
+  @include respond-to(tablet) {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
@@ -20,16 +20,16 @@
     border-radius: 8px;
     background-color: #fff;
 
-    .avt{
-        padding: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        img{
-            width: 100px; 
-            border-radius: 50%;
-            border: 3px solid $secondary-color;
-        }
+    .avt {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 100px;
+        border-radius: 50%;
+        border: 3px solid $secondary-color;
+      }
     }
 
     h2 {
@@ -109,6 +109,12 @@
           li {
             padding: 5px 0;
           }
+        }
+
+        .line {
+          padding-top: 10px;
+          width: 50%;
+          border-bottom: 2px solid rgba(201, 164, 121, 0.7);
         }
 
         p {

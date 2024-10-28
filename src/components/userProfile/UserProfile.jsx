@@ -139,6 +139,7 @@ const UserProfile = () => {
                     </li>
                   ))}
                 </ul>
+                <div className="line"></div>
                 <p><b>Tình Trạng Thanh Toán: </b> {order.paymentStatus}</p>
                 <p><b>Tình Trạng Giao Hàng: </b>{order.deliveryStatus}</p>
               </div>

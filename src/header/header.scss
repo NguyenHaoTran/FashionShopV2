@@ -83,7 +83,7 @@ header {
 
 .cart-popup {
   position: fixed;
-  right: -300px;
+  right: -400px;
   top: 130px;
   width: 400px;
   height: 70%;
@@ -128,16 +128,21 @@ header {
       width: 100%;
 
       img {
-        width: 50px;
+        width: 70px;
         height: auto;
         border-radius: 5px;
-        margin-right: 10px;
+        margin-right: 0px;
+        margin-left: 50px;
       }
 
       .cart-item-details {
         flex: 1; // Cho phép nội dung chiếm phần còn lại
+        p{
+          text-align: right;
+        }
         .sl{
           text-align: right;
+          text-decoration: underline;
         }
         .cart-item-actions {
           margin-top: 5px;
@@ -153,7 +158,7 @@ header {
             border-radius: 5px;
 
             &:hover {
-              background-color: darken($primary-color, 10%);
+              background-color: $primary-color;
             }
           }
         }
@@ -181,7 +186,7 @@ header {
       width: 60%;
 
       &:hover {
-        background-color: darken($accent-color, 10%);
+        background-color: $accent-color;
       }
     }
 
@@ -198,7 +203,7 @@ header {
       width: 60%;
 
       &:hover {
-        background-color: darken($primary-color, 10%);
+        background-color: $primary-color;
       }
     }
   }
@@ -223,7 +228,7 @@ header {
         cursor: pointer;
 
         &:hover {
-          background-color: darken($primary-color, 10%);
+          background-color: ($primary-color, 10%);
         }
       }
     }
